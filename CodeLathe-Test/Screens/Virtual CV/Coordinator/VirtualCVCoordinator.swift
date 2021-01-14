@@ -133,6 +133,10 @@ extension VirtualCVCoordinator: ViewShowcasePresenterDelegate {
     func viewShowcaseInformation(_ showcase: GalleryShowcase) {
         self.showViewShowcase(showcase)
     }
+    
+    func goBack() {
+        self.navigationController.popToRootViewController(animated: true)
+    }
 }
 
 

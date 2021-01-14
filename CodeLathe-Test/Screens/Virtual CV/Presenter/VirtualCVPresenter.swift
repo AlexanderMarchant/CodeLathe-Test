@@ -9,6 +9,7 @@ import Foundation
 
 protocol VirtualCVPresenterDelegate {
     func viewShowcaseInformation(_ showcase: GalleryShowcase)
+    func goBack()
 }
 
 protocol VirtualCVPresenterView {
@@ -39,6 +40,10 @@ class VirtualCVPresenter: VirtualCVPresenterProtocol {
     
     func didTapShowcase(showcase: GalleryShowcase) {
         self.delegate.viewShowcaseInformation(showcase)
+    }
+    
+    func goBack() {
+        self.delegate.goBack()
     }
     
 }

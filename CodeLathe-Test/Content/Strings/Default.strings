@@ -13,3 +13,7 @@
 
 // -- ViewShowcasePresenter -- //
 "no_project_link_error" = "No project link exists for this project";
+
+
+// -- VirtualCVViewController -- //
+"virtual_cv" = "%@ %@'s Virtual CV";

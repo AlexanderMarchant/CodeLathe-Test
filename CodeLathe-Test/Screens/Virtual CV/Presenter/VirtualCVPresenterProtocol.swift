@@ -8,6 +8,7 @@
 import Foundation
 
 protocol VirtualCVPresenterProtocol {
+    func goBack()
     func getCandidate()
     func didTapShowcase(showcase: GalleryShowcase)
 }
