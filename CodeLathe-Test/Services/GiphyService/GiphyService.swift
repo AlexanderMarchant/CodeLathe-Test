@@ -15,7 +15,7 @@ class GiphyService: GiphyServiceProtocol {
         
         let parameters: [String: String] = [
             "api_key" : Constants.wouldNotNormallyCommitToGit,
-            "limit" : "1"
+            "limit" : "15"
         ]
         
         var components = URLComponents(string: "https://api.giphy.com/v1/gifs/trending")!

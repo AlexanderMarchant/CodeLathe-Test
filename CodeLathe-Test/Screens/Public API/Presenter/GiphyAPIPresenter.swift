@@ -12,7 +12,7 @@ protocol GiphyAPIPresenterDelegate {
 }
 
 protocol GiphyAPIPresenterView {
-    func didGetGifs()
+    func didGetGifs(_ gifs: [GiphyCellViewModel])
 }
 
 class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
@@ -34,11 +34,26 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
     
     func getTrendingGifs() {
         self.giphyService.getTrendingGifs() { [weak self] (gifs, error) in
-            if let error = error {
-                print("FAILURE")
-                print(error)
-            } else {
+            if let gifs = gifs,
+               error == nil {
+                
+//                var giphyViewModels: [GiphyCellViewModel]
+                
+                var giphyViewModels = gifs.data!.map({ x in
+                    GiphyCellViewModel(
+                        gifUrl: x.embed_url!,
+                        title: x.title!,
+                        sourceUrl: x.source!,
+                        markedtrending: x.trending_datetime!,
+                        username: x.username)
+                })
+                
+                self?.view.didGetGifs(giphyViewModels)
+                
                 print("SUCCESS")
+            } else {
+                print("FAILURE")
+                print("Show an error")
             }
         }
     }

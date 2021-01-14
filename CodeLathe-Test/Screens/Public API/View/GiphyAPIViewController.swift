@@ -10,6 +10,9 @@ import UIKit
 class GiphyAPIViewController: UIViewController, Storyboarded {
     
     var giphyAPIPresenter: GiphyAPIPresenterProtocol!
+    
+    @IBOutlet weak var giphyTableView: UITableView!
+    private var giphyTableViewDataSource: GiphyTableViewDataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,17 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
 }
 
 extension GiphyAPIViewController: GiphyAPIPresenterView {
-    func didGetGifs() {
+    func didGetGifs(_ gifs: [GiphyCellViewModel]) {
         
+        DispatchQueue.main.async {
+            self.giphyTableViewDataSource = GiphyTableViewDataSource(
+                gifs: gifs,
+                tableView: self.giphyTableView)
+            
+            self.giphyTableView.dataSource = self.giphyTableViewDataSource
+            self.giphyTableView.delegate = self.giphyTableViewDataSource
+            
+            self.giphyTableView.reloadData()
+        }
     }
 }

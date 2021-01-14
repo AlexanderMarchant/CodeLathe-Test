@@ -90,6 +90,10 @@
 		D4BAB83E25B0C74B00D21593 /* GifSupportModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB83D25B0C74B00D21593 /* GifSupportModels.swift */; };
 		D4BAB84725B0DB1800D21593 /* GifTrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB84625B0DB1800D21593 /* GifTrendModel.swift */; };
 		D4BAB84D25B0DB3500D21593 /* GifSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB84C25B0DB3500D21593 /* GifSearchModel.swift */; };
+		D4BAB86625B0DD7C00D21593 /* GiphyTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB86525B0DD7C00D21593 /* GiphyTableViewDataSource.swift */; };
+		D4BAB86C25B0DE0200D21593 /* GiphyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB86B25B0DE0200D21593 /* GiphyCellViewModel.swift */; };
+		D4BAB87225B0DEC700D21593 /* GiphyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB87025B0DEC700D21593 /* GiphyCell.swift */; };
+		D4BAB87325B0DEC700D21593 /* GiphyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4BAB87125B0DEC700D21593 /* GiphyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +207,10 @@
 		D4BAB83D25B0C74B00D21593 /* GifSupportModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSupportModels.swift; sourceTree = "<group>"; };
 		D4BAB84625B0DB1800D21593 /* GifTrendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifTrendModel.swift; sourceTree = "<group>"; };
 		D4BAB84C25B0DB3500D21593 /* GifSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchModel.swift; sourceTree = "<group>"; };
+		D4BAB86525B0DD7C00D21593 /* GiphyTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyTableViewDataSource.swift; sourceTree = "<group>"; };
+		D4BAB86B25B0DE0200D21593 /* GiphyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyCellViewModel.swift; sourceTree = "<group>"; };
+		D4BAB87025B0DEC700D21593 /* GiphyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyCell.swift; sourceTree = "<group>"; };
+		D4BAB87125B0DEC700D21593 /* GiphyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiphyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +431,7 @@
 		D44CDF4125AFB4B500880FD0 /* Custom Storyboard Objects */ = {
 			isa = PBXGroup;
 			children = (
+				D4BAB86A25B0DDF400D21593 /* Table View Cells */,
 				D44CDFE825AFD05800880FD0 /* Views */,
 				D44CDFBB25AFBEF400880FD0 /* Collection View Cells */,
 				D44CDF6425AFB59800880FD0 /* Buttons */,
@@ -556,6 +565,7 @@
 		D44CDFCF25AFC0B400880FD0 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				D4BAB86425B0DD6100D21593 /* GiphyTableView */,
 				D44CE00C25B0574C00880FD0 /* GalleryCollectionView */,
 				D44CDFD025AFC0CC00880FD0 /* SkillsCollectionView */,
 			);
@@ -797,6 +807,24 @@
 			path = SupportingModels;
 			sourceTree = "<group>";
 		};
+		D4BAB86425B0DD6100D21593 /* GiphyTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAB86525B0DD7C00D21593 /* GiphyTableViewDataSource.swift */,
+			);
+			path = GiphyTableView;
+			sourceTree = "<group>";
+		};
+		D4BAB86A25B0DDF400D21593 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAB86B25B0DE0200D21593 /* GiphyCellViewModel.swift */,
+				D4BAB87025B0DEC700D21593 /* GiphyCell.swift */,
+				D4BAB87125B0DEC700D21593 /* GiphyCell.xib */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -922,6 +950,7 @@
 				D44CE00825B055E300880FD0 /* GalleryCell.xib in Resources */,
 				D44CDE7E25AFA89C00880FD0 /* Main.storyboard in Resources */,
 				D44CDFB125AFB9E200880FD0 /* GiphyAPI.storyboard in Resources */,
+				D4BAB87325B0DEC700D21593 /* GiphyCell.xib in Resources */,
 				D44CDF0925AFACCF00880FD0 /* AppColours.xcassets in Resources */,
 				D44CDEF325AFAB3900880FD0 /* Inter-ExtraBold.ttf in Resources */,
 				D44CDEF525AFAB3900880FD0 /* Inter-Black.ttf in Resources */,
@@ -951,6 +980,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BAB86625B0DD7C00D21593 /* GiphyTableViewDataSource.swift in Sources */,
 				D4BAB7C025B059C100D21593 /* CandidateGallery.swift in Sources */,
 				D44CDF5B25AFB52800880FD0 /* CLBody.swift in Sources */,
 				D44CDF9825AFB8EA00880FD0 /* VirtualCVCoordinator.swift in Sources */,
@@ -959,6 +989,7 @@
 				D44CDFAC25AFB9CC00880FD0 /* GiphyAPIViewController.swift in Sources */,
 				D44CE00E25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift in Sources */,
 				D44CDF6F25AFB5EE00880FD0 /* Constants.swift in Sources */,
+				D4BAB86C25B0DE0200D21593 /* GiphyCellViewModel.swift in Sources */,
 				D4BAB7C525B05A4D00D21593 /* GalleryShowcase.swift in Sources */,
 				D44CDED825AFAB0500880FD0 /* Fonts.swift in Sources */,
 				D4BAB83025B0C6AE00D21593 /* GiphyServiceProtocol.swift in Sources */,
@@ -976,6 +1007,7 @@
 				D44CDECF25AFAAA300880FD0 /* LocalizedString.swift in Sources */,
 				D44CDFF825AFD09E00880FD0 /* CVHeaderViewModel.swift in Sources */,
 				D4BAB84725B0DB1800D21593 /* GifTrendModel.swift in Sources */,
+				D4BAB87225B0DEC700D21593 /* GiphyCell.swift in Sources */,
 				D44CDF4C25AFB4F300880FD0 /* CLSubTitle.swift in Sources */,
 				D4BAB80A25B0895B00D21593 /* ViewShowcasePresenterProtocol.swift in Sources */,
 				D4BAB7B625B0592500D21593 /* Candidate.swift in Sources */,
