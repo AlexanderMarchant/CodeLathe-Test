@@ -18,22 +18,38 @@ class VirtualCVViewController: UIViewController, Storyboarded {
     
     private var skillsCollectionViewDataSource: SkillsCollectionViewDataSource!
     private var galleryCollectionViewDataSource: GalleryCollectionViewDataSource!
+    
+    lazy var backSwipeGestureRecognizer: UISwipeGestureRecognizer = {
+        let recognizer = UISwipeGestureRecognizer(target: self, action: #selector(goBack))
+        recognizer.direction = .right
+        return recognizer
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.appColor(.background)!
         
+        var backIcon = UIImage(named: "back-icon")!.withRenderingMode(.alwaysTemplate)
+        backIcon = backIcon.withTintColor(UIColor.appColor(.body)!)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: backIcon, style: .done, target: self, action: #selector(goBack))
+        
         virtualCVPresenter.getCandidate()
         
+        self.view.addGestureRecognizer(backSwipeGestureRecognizer)
+        
+    }
+    
+    @objc func goBack() {
+        virtualCVPresenter.goBack()
     }
 
 }
 
 extension VirtualCVViewController: VirtualCVPresenterView {
     func didGetCandidate(_ candidate: Candidate) {
-        
-        self.title = "\(candidate.firstName) \(candidate.lastName)'s Virtual CV"
+        self.title = String(format: localizedString(forKey: "virtual_cv"), candidate.firstName, candidate.lastName)
         
         cvHeaderView.model = CVHeaderViewModel(
             firstName: candidate.firstName,

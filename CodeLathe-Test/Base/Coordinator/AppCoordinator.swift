@@ -21,6 +21,18 @@ class AppCoordinator: Coordinator {
         self.navigationController = navigationController
         self.uiApplicationHelperService = UIApplicationHelperService()
         
+        
+        self.navigationController.navigationBar.tintColor = UIColor.appColor(.body)
+        self.navigationController.navigationBar.barTintColor = UIColor.appColor(.background)!
+        self.navigationController.navigationBar.shadowImage = UIImage()
+        self.navigationController.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: Fonts.headerFont, NSAttributedString.Key.foregroundColor: UIColor.appColor(.body)!]
+        
+        self.navigationController.navigationBar.layer.masksToBounds = false
+        self.navigationController.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+        self.navigationController.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.navigationController.navigationBar.layer.shadowRadius = 4
+        self.navigationController.navigationBar.layer.shadowOpacity = 0.7
+        
         super.init()
         
     }
