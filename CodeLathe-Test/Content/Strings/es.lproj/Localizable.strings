@@ -9,6 +9,7 @@
 // -- ViewShowcaseViewController -- //
 "take_a_look" = "Ver el proyecto";
 "no_project_link" = "No enlace de proyecto";
+"open_project_link" = "Abrir el enlace de proyecto";
 
 
 // -- ViewShowcasePresenter -- //

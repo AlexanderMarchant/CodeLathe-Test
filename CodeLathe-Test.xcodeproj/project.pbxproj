@@ -83,6 +83,8 @@
 		D4BAB80A25B0895B00D21593 /* ViewShowcasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB80925B0895B00D21593 /* ViewShowcasePresenterProtocol.swift */; };
 		D4BAB81325B0913700D21593 /* UIApplicationHelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB81225B0913700D21593 /* UIApplicationHelperService.swift */; };
 		D4BAB81825B0915400D21593 /* UIApplicationHelperServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB81725B0915400D21593 /* UIApplicationHelperServiceProtocol.swift */; };
+		D4BAB81E25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB81D25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift */; };
+		D4BAB82725B0BD5600D21593 /* UIArray-MenuIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB82625B0BD5600D21593 /* UIArray-MenuIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +191,8 @@
 		D4BAB80925B0895B00D21593 /* ViewShowcasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShowcasePresenterProtocol.swift; sourceTree = "<group>"; };
 		D4BAB81225B0913700D21593 /* UIApplicationHelperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIApplicationHelperService.swift; path = ../../../../../../../UIApplicationHelperService.swift; sourceTree = "<group>"; };
 		D4BAB81725B0915400D21593 /* UIApplicationHelperServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIApplicationHelperServiceProtocol.swift; path = ../../../../../../../UIApplicationHelperServiceProtocol.swift; sourceTree = "<group>"; };
+		D4BAB81D25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryCollectionViewDataSource-ContextMenu.swift"; sourceTree = "<group>"; };
+		D4BAB82625B0BD5600D21593 /* UIArray-MenuIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIArray-MenuIdentifiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +308,7 @@
 		D44CDECD25AFAA8800880FD0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D4BAB82525B0BD4700D21593 /* UIArray */,
 				D4BAB7D625B05E1400D21593 /* UIView */,
 				D4BAB7D525B05E0D00D21593 /* UIColor */,
 				D4BAB7D425B05E0400D21593 /* UIViewController */,
@@ -586,6 +591,7 @@
 		D44CE00C25B0574C00880FD0 /* GalleryCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				D4BAB81C25B0BCC000D21593 /* Extensions */,
 				D44CE00D25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift */,
 			);
 			path = GalleryCollectionView;
@@ -718,6 +724,22 @@
 				D4BAB81725B0915400D21593 /* UIApplicationHelperServiceProtocol.swift */,
 			);
 			path = UIApplicationHelperService;
+			sourceTree = "<group>";
+		};
+		D4BAB81C25B0BCC000D21593 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAB81D25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4BAB82525B0BD4700D21593 /* UIArray */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAB82625B0BD5600D21593 /* UIArray-MenuIdentifiable.swift */,
+			);
+			path = UIArray;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -903,12 +925,14 @@
 				D4BAB81325B0913700D21593 /* UIApplicationHelperService.swift in Sources */,
 				D44CDF5625AFB51400880FD0 /* CLSubHeader.swift in Sources */,
 				D4BAB80525B0895200D21593 /* ViewShowcasePresenter.swift in Sources */,
+				D4BAB81E25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift in Sources */,
 				D44CE00125B055CD00880FD0 /* GalleryCellModel.swift in Sources */,
 				D44CDF9325AFB86200880FD0 /* VirtualCVPresenterProtocol.swift in Sources */,
 				D44CDF5125AFB50100880FD0 /* CLHeader.swift in Sources */,
 				D44CDF2925AFB2C800880FD0 /* AppCoordinator.swift in Sources */,
 				D44CDF8125AFB83D00880FD0 /* VirtualCVViewController.swift in Sources */,
 				D44CDE7925AFA89C00880FD0 /* SceneDelegate.swift in Sources */,
+				D4BAB82725B0BD5600D21593 /* UIArray-MenuIdentifiable.swift in Sources */,
 				D44CE00725B055E300880FD0 /* GalleryCell.swift in Sources */,
 				D44CDFC325AFBF4300880FD0 /* SkillCell.swift in Sources */,
 				D44CDF9D25AFB9AA00880FD0 /* GiphyAPICoordinator.swift in Sources */,

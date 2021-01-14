@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct GalleryShowcase {
+struct GalleryShowcase: MenuIdentifiable {
+    
+    var id: String?
+    
+    var elementId: String!
     
     let displayImageUrl: String
     let title: String
@@ -24,6 +28,7 @@ struct GalleryShowcase {
         technologiesUsed: [String],
         challenges: [String]) {
         
+        self.id = UUID().uuidString
         self.displayImageUrl = displayImageUrl
         self.title = title
         self.description = description

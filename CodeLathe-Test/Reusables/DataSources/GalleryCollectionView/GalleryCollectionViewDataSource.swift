@@ -29,12 +29,6 @@ class GalleryCollectionViewDataSource: NSObject, UICollectionViewDataSource, UIC
         
         self.collectionView.backgroundColor = .clear
         
-//        let alignedLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .top)
-//        alignedLayout.minimumInteritemSpacing = Constants.goalCollectionViewCellSpacing
-//        alignedLayout.minimumLineSpacing = Constants.goalCollectionViewCellSpacing
-//        alignedLayout.scrollDirection = .vertical
-//        collectionView.collectionViewLayout = alignedLayout
-        
         collectionView.register(
             UINib.init(
                 nibName: Constants.galleryCellNibName,

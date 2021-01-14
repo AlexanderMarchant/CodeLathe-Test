@@ -22,14 +22,38 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPX-pa-FgG">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mhN-yO-yM4">
+                                                <rect key="frame" x="25" y="50" width="364" height="364"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mhN-yO-yM4" secondAttribute="height" multiplier="1:1" id="xuO-G2-dPB"/>
+                                                </constraints>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSd-25-bVv" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="100" width="87.5" height="21"/>
+                                                <rect key="frame" x="25" y="439" width="87.5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpQ-kB-JrG" customClass="CLBody" customModule="CodeLathe_Test" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="146" width="364" height="20.5"/>
+                                                <rect key="frame" x="25" y="485" width="364" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technologies Used" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0F-sq-TAK" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="530.5" width="145" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4E5-SH-IQd" customClass="CLBody" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="576.5" width="364" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenges Faced" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI8-Tw-dD3" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="601.5" width="135" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -40,10 +64,22 @@
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dpQ-kB-JrG" secondAttribute="bottom" constant="100" id="0Zb-bn-smK"/>
                                             <constraint firstAttribute="trailing" secondItem="dpQ-kB-JrG" secondAttribute="trailing" constant="25" id="2DK-VS-x6O"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LSd-25-bVv" secondAttribute="trailing" constant="25" id="4XK-1L-zZW"/>
+                                            <constraint firstItem="LSd-25-bVv" firstAttribute="top" secondItem="mhN-yO-yM4" secondAttribute="bottom" constant="25" id="6Yp-kL-PKW"/>
+                                            <constraint firstItem="4E5-SH-IQd" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="6c5-EG-FdS"/>
+                                            <constraint firstItem="k0F-sq-TAK" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="8E1-rL-WHZ"/>
+                                            <constraint firstItem="mhN-yO-yM4" firstAttribute="top" secondItem="OPX-pa-FgG" secondAttribute="top" constant="50" id="R1L-WH-r3V"/>
                                             <constraint firstItem="dpQ-kB-JrG" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="Zbo-Nx-4xH"/>
+                                            <constraint firstAttribute="trailing" secondItem="4E5-SH-IQd" secondAttribute="trailing" constant="25" id="ZzK-ay-MAU"/>
+                                            <constraint firstItem="4E5-SH-IQd" firstAttribute="top" secondItem="k0F-sq-TAK" secondAttribute="bottom" constant="25" id="cVo-iw-Gms"/>
+                                            <constraint firstAttribute="trailing" secondItem="mhN-yO-yM4" secondAttribute="trailing" constant="25" id="cnU-UL-6iV"/>
                                             <constraint firstItem="dpQ-kB-JrG" firstAttribute="top" secondItem="LSd-25-bVv" secondAttribute="bottom" constant="25" id="ect-u9-fAx"/>
-                                            <constraint firstItem="LSd-25-bVv" firstAttribute="top" secondItem="OPX-pa-FgG" secondAttribute="top" constant="100" id="gpr-yP-jcX"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="k0F-sq-TAK" secondAttribute="trailing" constant="25" id="iRe-O9-Ite"/>
                                             <constraint firstItem="LSd-25-bVv" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="kw2-aM-243"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HI8-Tw-dD3" secondAttribute="trailing" constant="25" id="qmt-Da-cD9"/>
+                                            <constraint firstItem="HI8-Tw-dD3" firstAttribute="top" secondItem="4E5-SH-IQd" secondAttribute="bottom" constant="25" id="qtk-W5-VIL"/>
+                                            <constraint firstItem="HI8-Tw-dD3" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="uMF-Iv-j2Z"/>
+                                            <constraint firstItem="mhN-yO-yM4" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="wbT-JT-cyg"/>
+                                            <constraint firstItem="k0F-sq-TAK" firstAttribute="top" secondItem="dpQ-kB-JrG" secondAttribute="bottom" constant="25" id="y6V-Jx-HKM"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47E-No-x9B" customClass="CLPrimaryButton" customModule="CodeLathe_Test" customModuleProvider="target">
@@ -83,7 +119,9 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="dpQ-kB-JrG" id="VXv-6b-iMe"/>
+                        <outlet property="projectLogo" destination="mhN-yO-yM4" id="vCO-Gf-0bV"/>
                         <outlet property="takeALookButton" destination="47E-No-x9B" id="4QI-k0-Scg"/>
+                        <outlet property="technologiesUsedLabel" destination="4E5-SH-IQd" id="gwQ-Gp-Afs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gm3-AU-tHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
