@@ -26,4 +26,7 @@ struct Constants {
     
     // Other Links
     static let codalatheWebsiteLink = "https://www.getfilecloud.com"
+    
+    // Giphy API
+    static let wouldNotNormallyCommitToGit = ""
 }

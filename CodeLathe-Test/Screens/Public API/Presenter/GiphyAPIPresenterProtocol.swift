@@ -8,5 +8,6 @@
 import Foundation
 
 protocol GiphyAPIPresenterProtocol {
+    func getTrendingGifs()
     func didTapVirtualCv()
 }

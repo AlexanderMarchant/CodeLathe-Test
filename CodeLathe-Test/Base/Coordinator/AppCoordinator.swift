@@ -11,6 +11,7 @@ import UIKit
 class AppCoordinator: Coordinator {
     
     var navigationController: UINavigationController
+    let giphyService: GiphyServiceProtocol
     let uiApplicationHelperService: UIApplicationHelperServiceProtocol
     
 
@@ -19,6 +20,7 @@ class AppCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         
         self.navigationController = navigationController
+        self.giphyService = GiphyService()
         self.uiApplicationHelperService = UIApplicationHelperService()
         
         
@@ -53,6 +55,7 @@ class AppCoordinator: Coordinator {
         
         let giphyAPICoordinator = GiphyAPICoordinator(
             self.navigationController,
+            self.giphyService,
             self.uiApplicationHelperService)
         
         giphyAPICoordinator.delegate = self

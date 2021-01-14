@@ -18,6 +18,8 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
         
         navigationItem.setLeftBarButton(nil, animated: false)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "CV", style: .plain, target: self, action: #selector(virtualCvTapped))
+        
+        giphyAPIPresenter.getTrendingGifs()
     }
     
     @objc func virtualCvTapped()
@@ -28,5 +30,7 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
 }
 
 extension GiphyAPIViewController: GiphyAPIPresenterView {
-    
+    func didGetGifs() {
+        
+    }
 }

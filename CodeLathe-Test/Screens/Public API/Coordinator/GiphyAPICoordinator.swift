@@ -14,15 +14,18 @@ protocol GiphyAPICoordinatorDelegate: AnyObject {
 class GiphyAPICoordinator: Coordinator {
     
     let navigationController: UINavigationController
+    let giphyService: GiphyServiceProtocol
     let uiApplicationHelperService: UIApplicationHelperServiceProtocol
     
     weak var delegate: GiphyAPICoordinatorDelegate?
     
     init(
         _ navigationController: UINavigationController,
+        _ giphyService: GiphyServiceProtocol,
         _ uiApplicationHelperService: UIApplicationHelperServiceProtocol) {
         
         self.navigationController = navigationController
+        self.giphyService = giphyService
         self.uiApplicationHelperService = uiApplicationHelperService
         
         self.navigationController.isNavigationBarHidden = false
@@ -36,6 +39,7 @@ class GiphyAPICoordinator: Coordinator {
         let giphyAPIViewController = GiphyAPIViewController.instantiate(storyboard: "GiphyAPI")
         
         let giphyAPIPresenter = GiphyAPIPresenter(
+            self.giphyService,
             with: giphyAPIViewController,
             delegate: self)
         
