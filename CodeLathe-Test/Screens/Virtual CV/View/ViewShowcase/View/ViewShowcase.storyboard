@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Showcase View Controller-->
+        <scene sceneID="AuU-lb-Mg8">
+            <objects>
+                <viewController storyboardIdentifier="ViewShowcaseViewController" id="Cyl-wW-J74" customClass="ViewShowcaseViewController" customModule="CodeLathe_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zqU-lM-U89">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QW-SF-pOz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPX-pa-FgG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSd-25-bVv" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="100" width="87.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpQ-kB-JrG" customClass="CLBody" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="146" width="364" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dpQ-kB-JrG" secondAttribute="bottom" constant="100" id="0Zb-bn-smK"/>
+                                            <constraint firstAttribute="trailing" secondItem="dpQ-kB-JrG" secondAttribute="trailing" constant="25" id="2DK-VS-x6O"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LSd-25-bVv" secondAttribute="trailing" constant="25" id="4XK-1L-zZW"/>
+                                            <constraint firstItem="dpQ-kB-JrG" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="Zbo-Nx-4xH"/>
+                                            <constraint firstItem="dpQ-kB-JrG" firstAttribute="top" secondItem="LSd-25-bVv" secondAttribute="bottom" constant="25" id="ect-u9-fAx"/>
+                                            <constraint firstItem="LSd-25-bVv" firstAttribute="top" secondItem="OPX-pa-FgG" secondAttribute="top" constant="100" id="gpr-yP-jcX"/>
+                                            <constraint firstItem="LSd-25-bVv" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="kw2-aM-243"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47E-No-x9B" customClass="CLPrimaryButton" customModule="CodeLathe_Test" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="821" width="364" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="PSX-7F-AMl"/>
+                                        </constraints>
+                                        <state key="normal" title="Take a look"/>
+                                        <connections>
+                                            <action selector="takeALookButtonTapped:" destination="Cyl-wW-J74" eventType="touchUpInside" id="QrN-TX-Cjp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OPX-pa-FgG" firstAttribute="leading" secondItem="0QW-SF-pOz" secondAttribute="leading" id="0uE-FV-Hih"/>
+                                    <constraint firstItem="47E-No-x9B" firstAttribute="leading" secondItem="cUP-jW-B3F" secondAttribute="leading" constant="25" id="CIG-4Y-KAN"/>
+                                    <constraint firstItem="OPX-pa-FgG" firstAttribute="top" secondItem="0QW-SF-pOz" secondAttribute="top" id="Dff-mA-lgY"/>
+                                    <constraint firstItem="cUP-jW-B3F" firstAttribute="bottom" secondItem="47E-No-x9B" secondAttribute="bottom" constant="25" id="EDB-7W-Gju"/>
+                                    <constraint firstAttribute="bottom" secondItem="OPX-pa-FgG" secondAttribute="bottom" id="Gdu-Ba-AeA"/>
+                                    <constraint firstAttribute="trailing" secondItem="OPX-pa-FgG" secondAttribute="trailing" id="XhG-ie-maf"/>
+                                    <constraint firstItem="cUP-jW-B3F" firstAttribute="trailing" secondItem="47E-No-x9B" secondAttribute="trailing" constant="25" id="exi-jp-naN"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zmi-de-SlO"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="cUP-jW-B3F"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OzT-HV-msL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OPX-pa-FgG" firstAttribute="width" secondItem="zqU-lM-U89" secondAttribute="width" id="B1z-aL-3Y2"/>
+                            <constraint firstItem="0QW-SF-pOz" firstAttribute="leading" secondItem="OzT-HV-msL" secondAttribute="leading" id="KtF-eD-BNk"/>
+                            <constraint firstAttribute="bottom" secondItem="0QW-SF-pOz" secondAttribute="bottom" id="MlF-Wn-ADV"/>
+                            <constraint firstItem="0QW-SF-pOz" firstAttribute="top" secondItem="zqU-lM-U89" secondAttribute="top" id="aEI-2T-JzN"/>
+                            <constraint firstItem="OPX-pa-FgG" firstAttribute="height" secondItem="zqU-lM-U89" secondAttribute="height" priority="250" id="mBx-FB-KrL"/>
+                            <constraint firstItem="0QW-SF-pOz" firstAttribute="trailing" secondItem="OzT-HV-msL" secondAttribute="trailing" id="msi-AI-c8y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="dpQ-kB-JrG" id="VXv-6b-iMe"/>
+                        <outlet property="takeALookButton" destination="47E-No-x9B" id="4QI-k0-Scg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gm3-AU-tHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="14.732142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

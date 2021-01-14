@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  CodeLathe-Test
+
+  Created by Alex Marchant on 13/01/2021.
+  
+*/
+
+// -- ViewShowcaseViewController -- //
+"take_a_look" = "Ver el proyecto";
+"no_project_link" = "No enlace de proyecto";
+
+
+// -- ViewShowcasePresenter -- //
+"no_project_link_error" = "No hay ningún enlace de proyecto para este proyecto";

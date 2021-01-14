@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CVHeaderView" customModule="CodeLathe_Test" customModuleProvider="target">
+            <connections>
+                <outlet property="emailAddressImageView" destination="Xma-7P-DTw" id="dA8-Vo-Tfb"/>
+                <outlet property="emailAddressLabel" destination="KO8-ZW-tMZ" id="6C3-x9-eMf"/>
+                <outlet property="fullnameLabel" destination="VfS-uP-eOV" id="cqo-6U-eEV"/>
+                <outlet property="phoneNumberImageView" destination="7fe-Jy-WGD" id="hOH-EQ-hP4"/>
+                <outlet property="phoneNumberLabel" destination="f9K-dN-Cc3" id="Zeg-Rp-NyX"/>
+                <outlet property="pictureImageView" destination="Plp-ag-Wh2" id="gUZ-Wj-Ch4"/>
+                <outlet property="view" destination="iGe-Vz-Ai2" id="j9C-qD-U4G"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iGe-Vz-Ai2">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Plp-ag-Wh2">
+                    <rect key="frame" x="25" y="30" width="50" height="50"/>
+                    <color key="backgroundColor" red="0.79607843140000001" green="0.019607843140000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5dm-GI-dhR"/>
+                        <constraint firstAttribute="width" constant="50" id="78G-nj-QV9"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dLo-o5-0Np">
+                    <rect key="frame" x="246.5" y="25" width="142.5" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M8Q-bh-8b0">
+                            <rect key="frame" x="0.0" y="0.0" width="142.5" height="25"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-7P-DTw">
+                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="Jw0-yQ-Pe8"/>
+                                        <constraint firstAttribute="height" constant="25" id="vER-gz-jgB"/>
+                                    </constraints>
+                                    <state key="normal" image="email-icon"/>
+                                    <connections>
+                                        <action selector="sendEmail:" destination="-1" eventType="touchUpInside" id="LcW-Pg-ofa"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KO8-ZW-tMZ" customClass="CLSubHeader" customModule="CodeLathe_Test" customModuleProvider="target">
+                                    <rect key="frame" x="35" y="0.0" width="107.5" height="25"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="KO8-ZW-tMZ" secondAttribute="trailing" id="dav-Ck-jv0"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RwJ-wa-sXz">
+                            <rect key="frame" x="0.0" y="35" width="142.5" height="25"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fe-Jy-WGD">
+                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="a1V-hl-6DS"/>
+                                        <constraint firstAttribute="width" constant="25" id="bJE-Xg-DR2"/>
+                                    </constraints>
+                                    <state key="normal" image="phone-icon"/>
+                                    <connections>
+                                        <action selector="callNumber:" destination="-1" eventType="touchUpInside" id="Yaa-Kt-h4L"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9K-dN-Cc3" customClass="CLSubHeader" customModule="CodeLathe_Test" customModuleProvider="target">
+                                    <rect key="frame" x="35" y="0.0" width="107.5" height="25"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="M8Q-bh-8b0" secondAttribute="trailing" id="Hl4-nn-o7o"/>
+                        <constraint firstAttribute="trailing" secondItem="RwJ-wa-sXz" secondAttribute="trailing" id="bUk-PT-Nb8"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-uP-eOV" customClass="CLSubTitle" customModule="CodeLathe_Test" customModuleProvider="target">
+                    <rect key="frame" x="90" y="45" width="141.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Xon-Oa-8jZ"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dLo-o5-0Np" firstAttribute="top" secondItem="iGe-Vz-Ai2" secondAttribute="top" constant="25" id="3Ld-eh-1HU"/>
+                <constraint firstItem="Plp-ag-Wh2" firstAttribute="leading" secondItem="Xon-Oa-8jZ" secondAttribute="leading" constant="25" id="7MO-uq-70R"/>
+                <constraint firstItem="dLo-o5-0Np" firstAttribute="leading" secondItem="VfS-uP-eOV" secondAttribute="trailing" constant="15" id="8O4-Rd-Xid"/>
+                <constraint firstItem="Plp-ag-Wh2" firstAttribute="centerY" secondItem="iGe-Vz-Ai2" secondAttribute="centerY" id="IPh-3a-QHF"/>
+                <constraint firstItem="Xon-Oa-8jZ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dLo-o5-0Np" secondAttribute="bottom" constant="25" id="Oyf-3j-eFR"/>
+                <constraint firstItem="Xon-Oa-8jZ" firstAttribute="trailing" secondItem="dLo-o5-0Np" secondAttribute="trailing" constant="25" id="QKD-sB-gW5"/>
+                <constraint firstItem="VfS-uP-eOV" firstAttribute="centerY" secondItem="iGe-Vz-Ai2" secondAttribute="centerY" id="g2b-Nl-RTt"/>
+                <constraint firstItem="VfS-uP-eOV" firstAttribute="leading" secondItem="Plp-ag-Wh2" secondAttribute="trailing" constant="15" id="lIi-qW-R3J"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="2458" y="-52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="email-icon" width="24" height="24"/>
+        <image name="phone-icon" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
