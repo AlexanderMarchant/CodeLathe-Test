@@ -23,7 +23,14 @@ struct Constants {
     static let galleryCellIdentifier = "GalleryCell"
     static let galleryCellNibName = "GalleryCell"
     
+    // GiphyCell
+    static let giphyCellIdentifier = "GiphyCell"
+    static let giphyCellNibName = "GiphyCell"
+    
     
     // Other Links
     static let codalatheWebsiteLink = "https://www.getfilecloud.com"
+    
+    // Giphy API
+    static let wouldNotNormallyCommitToGit = "RDUK4VbtKsBrGD2TYrzL9KhZMK2qB0Vw"
 }

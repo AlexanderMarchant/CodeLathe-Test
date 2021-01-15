@@ -9,4 +9,6 @@ import Foundation
 
 protocol GiphyAPIPresenterProtocol {
     func didTapVirtualCv()
+    func getGifs(by searchType: GiphySearch, searchTerm: String?)
+    func loadNextGifSet()
 }

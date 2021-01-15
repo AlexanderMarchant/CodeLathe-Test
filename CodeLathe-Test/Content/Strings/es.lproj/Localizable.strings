@@ -6,6 +6,9 @@
   
 */
 
+// -- General Messages -- //
+"general_error" = "Algo salió mal, por favor volver a intentar";
+
 // -- ViewShowcaseViewController -- //
 "take_a_look" = "Ver el proyecto";
 "no_project_link" = "No enlace de proyecto";
@@ -18,3 +21,8 @@
 
 // -- VirtualCVViewController -- //
 "virtual_cv" = "%@ %@'s CV Virtual";
+
+
+// -- GiphyTableViewDataSource -- //
+"no_gifs_found_title" = "Ningún Gifs Encontrado";
+"no_gifs_found_description" = "Ningún gifs encontrado, buscas otra vez.";

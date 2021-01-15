@@ -15,6 +15,7 @@ enum AppColors : String {
     case skillCellBackground
     case navigationBarButtonFill
     case codeLathe
+    case borders
 }
 
 extension UIColor {

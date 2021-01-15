@@ -11,6 +11,7 @@ import UIKit
 class AppCoordinator: Coordinator {
     
     var navigationController: UINavigationController
+    let giphyService: GiphyServiceProtocol
     let uiApplicationHelperService: UIApplicationHelperServiceProtocol
     
 
@@ -19,8 +20,8 @@ class AppCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         
         self.navigationController = navigationController
+        self.giphyService = GiphyService()
         self.uiApplicationHelperService = UIApplicationHelperService()
-        
         
         self.navigationController.navigationBar.tintColor = UIColor.appColor(.body)
         self.navigationController.navigationBar.barTintColor = UIColor.appColor(.background)!
@@ -53,6 +54,7 @@ class AppCoordinator: Coordinator {
         
         let giphyAPICoordinator = GiphyAPICoordinator(
             self.navigationController,
+            self.giphyService,
             self.uiApplicationHelperService)
         
         giphyAPICoordinator.delegate = self
