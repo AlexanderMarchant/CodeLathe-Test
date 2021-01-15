@@ -82,6 +82,7 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
     
     @objc func showTrendingGifsTapped() {
         clearTableView()
+        setLoading(isLoading: true)
         giphyAPIPresenter.getGifs(by: .trending, searchTerm: nil)
     }
     
@@ -90,13 +91,17 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
-        setLoading(isLoading: true)
         clearTableView()
+        setLoading(isLoading: true)
         giphyAPIPresenter.getGifs(by: .bySearchTerm, searchTerm: searchTextField.text)
+        self.searchTextField.text = ""
     }
     
     func setLoading(isLoading: Bool) {
-        self.loadingView.setLoading(isLoading: isLoading)
+        DispatchQueue.main.async {
+            self.loadingView.setLoading(isLoading: isLoading)
+            self.navigationItem.leftBarButtonItem?.isEnabled = !isLoading
+        }
     }
     
     func setupTextFields() {
@@ -201,6 +206,5 @@ extension GiphyAPIViewController: GiphyTableViewDataSourceDelegate {
         setLoading(isLoading: false)
         AlertHandlerService.shared.showWarningAlert(view: self, message: message)
         clearTableView()
-        giphyAPIPresenter.getGifs(by: .trending, searchTerm: nil)
     }
 }

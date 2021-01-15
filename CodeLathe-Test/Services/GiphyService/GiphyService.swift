@@ -39,22 +39,15 @@ class GiphyService: GiphyServiceProtocol {
         
         self.performRequest(
             link: "https://api.giphy.com/v1/gifs/trending",
-            parameters: parameters) { (data, error) in
+            parameters: parameters) { (result: Result<ApiResponse<GifTrendModel>>) in
                 
-            if let data = data,
-               error == nil {
-                do {
-                    let decoder = JSONDecoder()
-                    let gifs = try decoder.decode(GifTrendModel.self, from: data)
-                    
-                    self.currentTrendingOffeset += limit
-                    completion(gifs, nil)
-                } catch {
-                    print("log an error")
-                    completion(nil, nil)
-                }
-            } else {
-                print("ERROR: \(error?.localizedDescription)")
+            switch result {
+            case let .success(response):
+                completion(response.entity, nil)
+            case let .failure(error):
+                
+                // Log this error to somewhere like crashlytics
+                
                 completion(nil, error)
             }
                 
@@ -75,22 +68,15 @@ class GiphyService: GiphyServiceProtocol {
         
         self.performRequest(
             link: "https://api.giphy.com/v1/gifs/search",
-            parameters: parameters) { (data, error) in
+            parameters: parameters) { (result: Result<ApiResponse<GifSearchModel>>) in
                 
-            if let data = data,
-               error == nil {
-                do {
-                    let decoder = JSONDecoder()
-                    let gifs = try decoder.decode(GifSearchModel.self, from: data)
-                    
-                    self.currentSearchOffset += limit
-                    completion(gifs, nil)
-                } catch {
-                    print("log an error")
-                    completion(nil, nil)
-                }
-            } else {
-                print("ERROR: \(error?.localizedDescription)")
+            switch result {
+            case let .success(response):
+                completion(response.entity, nil)
+            case let .failure(error):
+                
+                // Log this error to somewhere like crashlytics
+                
                 completion(nil, error)
             }
                 
@@ -98,10 +84,10 @@ class GiphyService: GiphyServiceProtocol {
         
     }
     
-    private func performRequest(
+    private func performRequest<T: Decodable>(
         link: String,
         parameters: [String: String],
-        completion: @escaping (Data?, Error?) -> Void) {
+        completion: @escaping (Result<ApiResponse<T>>) -> Void) {
         
         var components = URLComponents(string: link)!
         
@@ -114,16 +100,23 @@ class GiphyService: GiphyServiceProtocol {
         let request = URLRequest(url: components.url!)
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data,
-                  let response = response as? HTTPURLResponse,
-                  (200 ..< 300) ~= response.statusCode,
-                  error == nil else {
-                
-                    completion(nil, error)
-                    return
+            
+            guard let httpUrlResponse = response as? HTTPURLResponse else {
+                completion(.failure(NetworkRequestError(error: error)))
+                return
             }
             
-            completion(data, error)
+            let successRange = 200...299
+            if successRange.contains(httpUrlResponse.statusCode) {
+                do {
+                    let response = try ApiResponse<T>(data: data, httpUrlResponse: httpUrlResponse)
+                    completion(.success(response))
+                } catch {
+                    completion(.failure(error))
+                }
+            } else {
+                completion(.failure(ApiError(data: data, httpUrlResponse: httpUrlResponse)))
+            }
         }
         
         task.resume()

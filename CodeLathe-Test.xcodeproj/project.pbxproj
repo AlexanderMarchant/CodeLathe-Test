@@ -96,6 +96,8 @@
 		D4BAB87325B0DEC700D21593 /* GiphyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4BAB87125B0DEC700D21593 /* GiphyCell.xib */; };
 		D4BAB87925B101F500D21593 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = D4BAB87825B101F500D21593 /* SwiftyGif */; };
 		D4BAB87E25B114B400D21593 /* UIView-AddTopBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB87D25B114B400D21593 /* UIView-AddTopBorder.swift */; };
+		D4BAB88725B1B92600D21593 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB88625B1B92600D21593 /* APIResponse.swift */; };
+		D4BAB88F25B1BB0600D21593 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB88E25B1BB0600D21593 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +216,8 @@
 		D4BAB87025B0DEC700D21593 /* GiphyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyCell.swift; sourceTree = "<group>"; };
 		D4BAB87125B0DEC700D21593 /* GiphyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiphyCell.xib; sourceTree = "<group>"; };
 		D4BAB87D25B114B400D21593 /* UIView-AddTopBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-AddTopBorder.swift"; sourceTree = "<group>"; };
+		D4BAB88625B1B92600D21593 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		D4BAB88E25B1BB0600D21593 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +390,7 @@
 		D44CDF1225AFB05800880FD0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D4BAB88525B1B91300D21593 /* API */,
 				D4BAB82E25B0C69B00D21593 /* GiphyService */,
 				D4BAB81125B0912300D21593 /* UIApplicationHelperService */,
 				D4BAB7EE25B0762200D21593 /* AlertHandlerService */,
@@ -830,6 +835,15 @@
 			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
+		D4BAB88525B1B91300D21593 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAB88625B1B92600D21593 /* APIResponse.swift */,
+				D4BAB88E25B1BB0600D21593 /* Result.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1027,6 +1041,7 @@
 				D44CDF5625AFB51400880FD0 /* CLSubHeader.swift in Sources */,
 				D4BAB80525B0895200D21593 /* ViewShowcasePresenter.swift in Sources */,
 				D4BAB81E25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift in Sources */,
+				D4BAB88F25B1BB0600D21593 /* Result.swift in Sources */,
 				D4BAB83825B0C6B600D21593 /* GiphyService.swift in Sources */,
 				D44CE00125B055CD00880FD0 /* GalleryCellModel.swift in Sources */,
 				D44CDF9325AFB86200880FD0 /* VirtualCVPresenterProtocol.swift in Sources */,
@@ -1044,6 +1059,7 @@
 				D44CDF1F25AFB2B400880FD0 /* Storyboarded.swift in Sources */,
 				D4BAB83E25B0C74B00D21593 /* GifSupportModels.swift in Sources */,
 				D44CDFA225AFB9B600880FD0 /* GiphyAPIPresenter.swift in Sources */,
+				D4BAB88725B1B92600D21593 /* APIResponse.swift in Sources */,
 				D44CDF2425AFB2C100880FD0 /* Coordinator.swift in Sources */,
 				D4BAB7E425B075AF00D21593 /* ContactCandidateService.swift in Sources */,
 				D44CDF4425AFB4D200880FD0 /* CLTitle.swift in Sources */,

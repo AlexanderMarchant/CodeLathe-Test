@@ -6,6 +6,9 @@
   
 */
 
+// -- General Messages -- //
+"general_error" = "Something went wrong, please try again";
+
 // -- ViewShowcaseViewController -- //
 "take_a_look" = "Take a Look";
 "no_project_link" = "No Project Link";
