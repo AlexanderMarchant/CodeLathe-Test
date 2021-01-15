@@ -24,36 +24,28 @@ class GiphyService: GiphyServiceProtocol {
             "offset" : "\(currentTrendingOffeset)"
         ]
         
-        var components = URLComponents(string: "https://api.giphy.com/v1/gifs/trending")!
-        
-        components.queryItems = parameters.map { (key, value) in
-            URLQueryItem(name: key, value: value)
-        }
-        
-        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
-        
-        let request = URLRequest(url: components.url!)
-
-        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
-            guard let data = data,
-                  let response = response as? HTTPURLResponse,
-                  (200 ..< 300) ~= response.statusCode,
-                  error == nil else {
+        self.performRequest(
+            link: "https://api.giphy.com/v1/gifs/trending",
+            parameters: parameters) { (data, error) in
                 
-                    completion(nil, error)
-                    return
+            if let data = data,
+               error == nil {
+                do {
+                    let decoder = JSONDecoder()
+                    let gifs = try decoder.decode(GifTrendModel.self, from: data)
+                    
+                    self.currentSearchOffset += limit
+                    completion(gifs, nil)
+                } catch {
+                    print("log an error")
+                    completion(nil, nil)
+                }
+            } else {
+                print("ERROR: \(error?.localizedDescription)")
+                completion(nil, error)
             }
-            
-            // Do proper error handling
-                        
-            let decoder = JSONDecoder()
-            let gifs = try! decoder.decode(GifTrendModel.self, from: data)
-            
-            self?.currentTrendingOffeset += limit
-            
-            completion(gifs, nil)
+                
         }
-        task.resume()
     }
     
     func getGifsBySearch(
@@ -68,7 +60,37 @@ class GiphyService: GiphyServiceProtocol {
             "offset" : "\(currentSearchOffset)"
         ]
         
-        var components = URLComponents(string: "https://api.giphy.com/v1/gifs/search")!
+        self.performRequest(
+            link: "https://api.giphy.com/v1/gifs/search",
+            parameters: parameters) { (data, error) in
+                
+            if let data = data,
+               error == nil {
+                do {
+                    let decoder = JSONDecoder()
+                    let gifs = try decoder.decode(GifSearchModel.self, from: data)
+                    
+                    self.currentSearchOffset += limit
+                    completion(gifs, nil)
+                } catch {
+                    print("log an error")
+                    completion(nil, nil)
+                }
+            } else {
+                print("ERROR: \(error?.localizedDescription)")
+                completion(nil, error)
+            }
+                
+        }
+        
+    }
+    
+    private func performRequest(
+        link: String,
+        parameters: [String: String],
+        completion: @escaping (Data?, Error?) -> Void) {
+        
+        var components = URLComponents(string: link)!
         
         components.queryItems = parameters.map { (key, value) in
             URLQueryItem(name: key, value: value)
@@ -78,7 +100,7 @@ class GiphyService: GiphyServiceProtocol {
         
         let request = URLRequest(url: components.url!)
 
-        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data,
                   let response = response as? HTTPURLResponse,
                   (200 ..< 300) ~= response.statusCode,
@@ -88,17 +110,10 @@ class GiphyService: GiphyServiceProtocol {
                     return
             }
             
-            // Do proper error handling
-                        
-            let decoder = JSONDecoder()
-            let gifs = try! decoder.decode(GifSearchModel.self, from: data)
-            
-            self?.currentSearchOffset += limit
-            
-            completion(gifs, nil)
+            completion(data, error)
         }
-        task.resume()
         
+        task.resume()
     }
     
 }

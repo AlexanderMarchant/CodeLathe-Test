@@ -47,6 +47,8 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
             return
         }
         
+        // Need to reset the current offset when a new search is done
+        
         self.giphyService.getGifsBySearch(search: search, limit: 15) { [weak self] (gifs, error) in
             
             if let gifs = gifs,
@@ -55,10 +57,10 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
                 let giphyViewModels = gifs.data!.map({ x in
                     GiphyCellViewModel(
                         gifUrl: x.images!.downsized!.url!,
-                        title: x.title!,
-                        sourceUrl: x.source!,
-                        markedtrending: x.trending_datetime!,
-                        username: x.username)
+                        title: x.title ?? "No title",
+                        sourceUrl: x.source ?? "Unknown",
+                        markedtrending: x.trending_datetime ?? "Never",
+                        username: x.username ?? "Unknown")
                 })
                 
                 self?.view.didGetGifs(giphyViewModels)
@@ -77,10 +79,10 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
                 let giphyViewModels = gifs.data!.map({ x in
                     GiphyCellViewModel(
                         gifUrl: x.images!.downsized!.url!,
-                        title: x.title!,
-                        sourceUrl: x.source!,
-                        markedtrending: x.trending_datetime!,
-                        username: x.username)
+                        title: x.title ?? "No title",
+                        sourceUrl: x.source ?? "Unknown",
+                        markedtrending: x.trending_datetime ?? "Never",
+                        username: x.username ?? "Unknown")
                 })
                 
                 self?.view.didGetGifs(giphyViewModels)
