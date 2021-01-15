@@ -11,7 +11,6 @@ class ViewShowcaseViewController: UIViewController, Storyboarded {
     
     var viewShowcasePresenter: ViewShowcasePresenterProtocol!
     
-    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var projectLogo: UIImageView!
     @IBOutlet weak var descriptionLabel: CLBody!
     @IBOutlet weak var technologiesUsedLabel: CLBody!

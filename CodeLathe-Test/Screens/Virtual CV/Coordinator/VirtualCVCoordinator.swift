@@ -8,10 +8,7 @@
 import Foundation
 import UIKit
 
-protocol VirtualCVCoordinatorDelegate: AnyObject {
-    func didFinishViewingCV(_ virtualCVCoordinator: VirtualCVCoordinator)
-}
-
+// Mock Candidate Data
 let candidate = Candidate(
     firstName: "Alex",
     lastName: "Marchant",
@@ -33,7 +30,7 @@ let candidate = Candidate(
                 ]),
             GalleryShowcase(
                 displayImageUrl: "https://www.",
-                title: "DuckDuckGo",
+                title: "A Great Project",
                 description: "This project simply showcases what happens when an image fails to load.",
                 technologiesUsed: ["Swift"],
                 challenges: [
@@ -69,6 +66,11 @@ let candidate = Candidate(
         CandidateSkill(skill: "Agile"),
         CandidateSkill(skill: "Scrum")
     ])
+
+
+protocol VirtualCVCoordinatorDelegate: AnyObject {
+    func didFinishViewingCV(_ virtualCVCoordinator: VirtualCVCoordinator)
+}
 
 class VirtualCVCoordinator: Coordinator {
     

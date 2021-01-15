@@ -90,6 +90,7 @@
                                             <constraint firstItem="HI8-Tw-dD3" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="uMF-Iv-j2Z"/>
                                             <constraint firstItem="mhN-yO-yM4" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="wbT-JT-cyg"/>
                                             <constraint firstItem="k0F-sq-TAK" firstAttribute="top" secondItem="dpQ-kB-JrG" secondAttribute="bottom" constant="25" id="y6V-Jx-HKM"/>
+                                            <constraint firstItem="mhN-yO-yM4" firstAttribute="centerX" secondItem="OPX-pa-FgG" secondAttribute="centerX" id="zCF-w5-Yyz"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47E-No-x9B" customClass="CLPrimaryButton" customModule="CodeLathe_Test" customModuleProvider="target">
@@ -129,7 +130,6 @@
                     </view>
                     <connections>
                         <outlet property="challengesLabel" destination="OcH-Ih-OaL" id="4lw-Sj-AXE"/>
-                        <outlet property="contentView" destination="OPX-pa-FgG" id="UrX-GJ-ziH"/>
                         <outlet property="descriptionLabel" destination="dpQ-kB-JrG" id="VXv-6b-iMe"/>
                         <outlet property="projectLogo" destination="mhN-yO-yM4" id="vCO-Gf-0bV"/>
                         <outlet property="takeALookButton" destination="47E-No-x9B" id="4QI-k0-Scg"/>

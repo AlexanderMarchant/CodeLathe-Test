@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CVHeaderView" customModule="CodeLathe_Test" customModuleProvider="target">
             <connections>
+                <outlet property="dividerView" destination="COs-e7-Teb" id="wfP-O7-hS5"/>
                 <outlet property="emailAddressImageView" destination="Xma-7P-DTw" id="dA8-Vo-Tfb"/>
                 <outlet property="emailAddressLabel" destination="KO8-ZW-tMZ" id="6C3-x9-eMf"/>
                 <outlet property="fullnameLabel" destination="VfS-uP-eOV" id="cqo-6U-eEV"/>
@@ -89,26 +90,36 @@
                     </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-uP-eOV" customClass="CLSubTitle" customModule="CodeLathe_Test" customModuleProvider="target">
-                    <rect key="frame" x="90" y="45" width="141.5" height="20.5"/>
+                    <rect key="frame" x="90" y="45" width="125.5" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COs-e7-Teb">
+                    <rect key="frame" x="230.5" y="25" width="1" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="JM1-0q-mcE"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Xon-Oa-8jZ"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="dLo-o5-0Np" firstAttribute="top" secondItem="iGe-Vz-Ai2" secondAttribute="top" constant="25" id="3Ld-eh-1HU"/>
                 <constraint firstItem="Plp-ag-Wh2" firstAttribute="leading" secondItem="Xon-Oa-8jZ" secondAttribute="leading" constant="25" id="7MO-uq-70R"/>
-                <constraint firstItem="dLo-o5-0Np" firstAttribute="leading" secondItem="VfS-uP-eOV" secondAttribute="trailing" constant="15" id="8O4-Rd-Xid"/>
                 <constraint firstItem="Plp-ag-Wh2" firstAttribute="centerY" secondItem="iGe-Vz-Ai2" secondAttribute="centerY" id="IPh-3a-QHF"/>
+                <constraint firstItem="COs-e7-Teb" firstAttribute="top" secondItem="dLo-o5-0Np" secondAttribute="top" id="JoN-Od-1V5"/>
                 <constraint firstItem="Xon-Oa-8jZ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dLo-o5-0Np" secondAttribute="bottom" constant="25" id="Oyf-3j-eFR"/>
+                <constraint firstItem="COs-e7-Teb" firstAttribute="bottom" secondItem="dLo-o5-0Np" secondAttribute="bottom" id="P0W-ly-VMv"/>
                 <constraint firstItem="Xon-Oa-8jZ" firstAttribute="trailing" secondItem="dLo-o5-0Np" secondAttribute="trailing" constant="25" id="QKD-sB-gW5"/>
+                <constraint firstItem="COs-e7-Teb" firstAttribute="leading" secondItem="VfS-uP-eOV" secondAttribute="trailing" constant="15" id="Y5g-dP-GxH"/>
                 <constraint firstItem="VfS-uP-eOV" firstAttribute="centerY" secondItem="iGe-Vz-Ai2" secondAttribute="centerY" id="g2b-Nl-RTt"/>
+                <constraint firstItem="dLo-o5-0Np" firstAttribute="leading" secondItem="COs-e7-Teb" secondAttribute="trailing" constant="15" id="kYa-or-gWc"/>
                 <constraint firstItem="VfS-uP-eOV" firstAttribute="leading" secondItem="Plp-ag-Wh2" secondAttribute="trailing" constant="15" id="lIi-qW-R3J"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="2458" y="-52"/>
+            <point key="canvasLocation" x="2457.971014492754" y="-52.232142857142854"/>
         </view>
     </objects>
     <resources>

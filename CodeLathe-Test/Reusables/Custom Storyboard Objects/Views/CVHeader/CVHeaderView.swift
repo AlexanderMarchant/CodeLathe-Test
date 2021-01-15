@@ -14,6 +14,7 @@ protocol CVHeaderViewDelegate {
 class CVHeaderView: UIView {
     
     @IBOutlet var view: UIView!
+    @IBOutlet weak var dividerView: UIView!
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var fullnameLabel: CLSubTitle!
     @IBOutlet weak var emailAddressLabel: CLSubHeader!
@@ -66,6 +67,8 @@ class CVHeaderView: UIView {
         
         phoneNumberImageView.setImage(phoneIcon, for: .normal)
         phoneNumberImageView.tintColor = UIColor.appColor(.codeLathe)!
+        
+        self.dividerView.backgroundColor = UIColor.appColor(.body)
 
     }
     

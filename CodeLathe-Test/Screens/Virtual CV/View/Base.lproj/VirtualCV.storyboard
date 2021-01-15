@@ -162,7 +162,6 @@
                         <outlet property="bioLabel" destination="wdU-4L-eJH" id="nzG-Kb-xgU"/>
                         <outlet property="cvHeaderView" destination="MxI-zO-dRo" id="4nw-B5-PDD"/>
                         <outlet property="galleryCollectionView" destination="41Z-ED-5Om" id="KbW-OY-1oi"/>
-                        <outlet property="scrollView" destination="JYi-Oh-5wX" id="tyB-Uw-i1h"/>
                         <outlet property="skillsCollectionView" destination="C07-SS-EMl" id="OjR-QI-XLa"/>
                     </connections>
                 </viewController>
