@@ -58,15 +58,25 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcH-Ih-OaL" customClass="CLBody" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="647.5" width="364" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dpQ-kB-JrG" secondAttribute="bottom" constant="100" id="0Zb-bn-smK"/>
+                                            <constraint firstAttribute="trailing" secondItem="OcH-Ih-OaL" secondAttribute="trailing" constant="25" id="0iA-0O-GEg"/>
                                             <constraint firstAttribute="trailing" secondItem="dpQ-kB-JrG" secondAttribute="trailing" constant="25" id="2DK-VS-x6O"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LSd-25-bVv" secondAttribute="trailing" constant="25" id="4XK-1L-zZW"/>
                                             <constraint firstItem="LSd-25-bVv" firstAttribute="top" secondItem="mhN-yO-yM4" secondAttribute="bottom" constant="25" id="6Yp-kL-PKW"/>
                                             <constraint firstItem="4E5-SH-IQd" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="6c5-EG-FdS"/>
                                             <constraint firstItem="k0F-sq-TAK" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="8E1-rL-WHZ"/>
+                                            <constraint firstItem="OcH-Ih-OaL" firstAttribute="top" secondItem="HI8-Tw-dD3" secondAttribute="bottom" constant="25" id="ASv-6H-Yo8"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OcH-Ih-OaL" secondAttribute="bottom" constant="75" id="IyS-ec-DNT"/>
+                                            <constraint firstItem="OcH-Ih-OaL" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="Oja-c0-lqx"/>
                                             <constraint firstItem="mhN-yO-yM4" firstAttribute="top" secondItem="OPX-pa-FgG" secondAttribute="top" constant="50" id="R1L-WH-r3V"/>
                                             <constraint firstItem="dpQ-kB-JrG" firstAttribute="leading" secondItem="OPX-pa-FgG" secondAttribute="leading" constant="25" id="Zbo-Nx-4xH"/>
                                             <constraint firstAttribute="trailing" secondItem="4E5-SH-IQd" secondAttribute="trailing" constant="25" id="ZzK-ay-MAU"/>
@@ -118,6 +128,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="challengesLabel" destination="OcH-Ih-OaL" id="4lw-Sj-AXE"/>
                         <outlet property="descriptionLabel" destination="dpQ-kB-JrG" id="VXv-6b-iMe"/>
                         <outlet property="projectLogo" destination="mhN-yO-yM4" id="vCO-Gf-0bV"/>
                         <outlet property="takeALookButton" destination="47E-No-x9B" id="4QI-k0-Scg"/>

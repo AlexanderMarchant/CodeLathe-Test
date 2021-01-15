@@ -21,3 +21,8 @@
 
 // -- VirtualCVViewController -- //
 "virtual_cv" = "%@ %@'s Virtual CV";
+
+
+// -- GiphyTableViewDataSource -- //
+"no_gifs_found_title" = "No Gifs Found";
+"no_gifs_found_description" = "No gifs could be found, try searching again.";

@@ -14,6 +14,7 @@ class ViewShowcaseViewController: UIViewController, Storyboarded {
     @IBOutlet weak var projectLogo: UIImageView!
     @IBOutlet weak var descriptionLabel: CLBody!
     @IBOutlet weak var technologiesUsedLabel: CLBody!
+    @IBOutlet weak var challengesLabel: CLBody!
     @IBOutlet weak var takeALookButton: CLPrimaryButton!
 
     override func viewDidLoad() {
@@ -24,6 +25,10 @@ class ViewShowcaseViewController: UIViewController, Storyboarded {
         self.takeALookButton.setTitle(localizedString(forKey: "take_a_look"), for: .normal)
 
         viewShowcasePresenter.getShowcase()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.layoutIfNeeded()
     }
     
     @IBAction func takeALookButtonTapped(_ sender: Any) {
@@ -68,7 +73,7 @@ extension ViewShowcaseViewController: ViewShowcasePresenterView {
         self.descriptionLabel.text = showcase.description
         
         showcase.technologiesUsed.forEach({
-            if var techsUsed = self.technologiesUsedLabel.text {
+            if let techsUsed = self.technologiesUsedLabel.text {
                 if(techsUsed.isEmpty) {
                     self.technologiesUsedLabel.text = "\($0)"
                 } else {
@@ -76,6 +81,19 @@ extension ViewShowcaseViewController: ViewShowcasePresenterView {
                 }
             } else {
                 self.technologiesUsedLabel.text = "\($0)"
+            }
+        })
+        
+        // Given more time, I would display this in a more interesting format
+        showcase.challenges.forEach({
+            if let challenges = self.challengesLabel.text {
+                if(challenges.isEmpty) {
+                    self.challengesLabel.text = "\($0)"
+                } else {
+                    self.challengesLabel.text = "\(challenges)\n\n\n\($0)"
+                }
+            } else {
+                self.challengesLabel.text = "\($0)"
             }
         })
         

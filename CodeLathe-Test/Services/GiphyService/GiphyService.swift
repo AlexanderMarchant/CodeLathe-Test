@@ -40,7 +40,9 @@ class GiphyService: GiphyServiceProtocol {
         self.performRequest(
             link: "https://api.giphy.com/v1/gifs/trending",
             parameters: parameters) { (result: Result<ApiResponse<GifTrendModel>>) in
-                
+            
+                self.currentTrendingOffeset += limit
+            
             switch result {
             case let .success(response):
                 completion(response.entity, nil)
@@ -69,7 +71,9 @@ class GiphyService: GiphyServiceProtocol {
         self.performRequest(
             link: "https://api.giphy.com/v1/gifs/search",
             parameters: parameters) { (result: Result<ApiResponse<GifSearchModel>>) in
-                
+            
+                self.currentSearchOffset += limit
+            
             switch result {
             case let .success(response):
                 completion(response.entity, nil)

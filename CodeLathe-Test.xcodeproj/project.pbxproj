@@ -132,10 +132,7 @@
 		D44CDE9425AFA8A400880FD0 /* CodeLathe-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodeLathe-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44CDE9825AFA8A400880FD0 /* CodeLathe_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLathe_TestUITests.swift; sourceTree = "<group>"; };
 		D44CDE9A25AFA8A400880FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D44CDEAC25AFA98C00880FD0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		D44CDEAD25AFA98C00880FD0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D44CDEB425AFA9AA00880FD0 /* Default.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Default.strings; sourceTree = "<group>"; };
-		D44CDEC725AFAA6500880FD0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D44CDECC25AFAA7300880FD0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D44CDECE25AFAAA300880FD0 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		D44CDED725AFAB0500880FD0 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -181,7 +178,6 @@
 		D44CDFC725AFBF5300880FD0 /* SkillCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCellModel.swift; sourceTree = "<group>"; };
 		D44CDFD125AFC0EF00880FD0 /* SkillsCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		D44CDFDF25AFC47500880FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VirtualCV.storyboard; sourceTree = "<group>"; };
-		D44CDFE425AFCFCC00880FD0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/VirtualCV.strings; sourceTree = "<group>"; };
 		D44CDFEA25AFD08000880FD0 /* CVHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVHeaderView.swift; sourceTree = "<group>"; };
 		D44CDFF225AFD08B00880FD0 /* CVHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVHeaderView.xib; sourceTree = "<group>"; };
 		D44CDFF725AFD09E00880FD0 /* CVHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVHeaderViewModel.swift; sourceTree = "<group>"; };
@@ -935,7 +931,6 @@
 			knownRegions = (
 				en,
 				Base,
-				es,
 			);
 			mainGroup = D44CDE6A25AFA89C00880FD0;
 			packageReferences = (
@@ -1109,7 +1104,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D44CDE7D25AFA89C00880FD0 /* Base */,
-				D44CDEAC25AFA98C00880FD0 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1118,7 +1112,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D44CDE8225AFA8A300880FD0 /* Base */,
-				D44CDEAD25AFA98C00880FD0 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1126,7 +1119,6 @@
 		D44CDEC825AFAA6500880FD0 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D44CDEC725AFAA6500880FD0 /* es */,
 				D44CDECC25AFAA7300880FD0 /* en */,
 			);
 			name = Localizable.strings;
@@ -1136,7 +1128,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D44CDFDF25AFC47500880FD0 /* Base */,
-				D44CDFE425AFCFCC00880FD0 /* es */,
 			);
 			name = VirtualCV.storyboard;
 			sourceTree = "<group>";

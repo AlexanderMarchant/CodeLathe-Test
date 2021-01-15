@@ -81,7 +81,7 @@ class GiphyTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
 
 extension GiphyTableViewDataSource: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        let str = "No Gifs Found"
+        let str = localizedString(forKey: "no_gifs_found_title")
         let attrs: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: Fonts.subTitleFont,
             NSAttributedString.Key.foregroundColor: UIColor.appColor(.body)!]
@@ -90,7 +90,7 @@ extension GiphyTableViewDataSource: DZNEmptyDataSetSource, DZNEmptyDataSetDelega
     }
     
     func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        let str = "No gifs could be found, try searching again."
+        let str = localizedString(forKey: "no_gifs_found_description")
         let attrs: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: Fonts.subHeaderFont,
             NSAttributedString.Key.foregroundColor: UIColor.appColor(.body)!]
@@ -99,6 +99,6 @@ extension GiphyTableViewDataSource: DZNEmptyDataSetSource, DZNEmptyDataSetDelega
     }
     
     func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
-        return UIImage(named: "image-search-icon")
+        return UIImage(named: "image-search-icon")?.withTintColor(UIColor.appColor(.body)!)
     }
 }
