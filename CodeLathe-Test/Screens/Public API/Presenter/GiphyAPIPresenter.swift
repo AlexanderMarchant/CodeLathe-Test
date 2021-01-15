@@ -51,7 +51,7 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
     
     func loadNextGifSet() {
         guard let currentSearch = currentSearch else {
-            self.view.errorOccurred(message: "Please perform a search")
+            self.view.errorOccurred(message: localizedString(forKey: "perform_a_valid_search"))
             return
         }
         
@@ -66,14 +66,14 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
     internal func getGifsBySearchTerm(userSearch: String?) {
         
         guard var search = userSearch else {
-            self.view.errorOccurred(message: "Please enter a valid search")
+            self.view.errorOccurred(message: localizedString(forKey: "perform_a_valid_search"))
             return
         }
         
         search = search.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if(search.isEmpty) {
-            self.view.errorOccurred(message: "Please enter a valid search")
+            self.view.errorOccurred(message: localizedString(forKey: "perform_a_valid_search"))
             return
         }
         
@@ -88,15 +88,15 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
                 let giphyViewModels = gifs.data!.map({ x in
                     GiphyCellViewModel(
                         gifUrl: x.images!.downsized!.url!,
-                        title: x.title ?? "No title",
-                        sourceUrl: x.source ?? "Unknown",
-                        markedTrending: x.trending_datetime ?? "Never",
-                        username: x.username ?? "Unknown")
+                        title: x.title ?? "",
+                        sourceUrl: x.source ?? "",
+                        markedTrending: x.trending_datetime ?? "",
+                        username: x.username ?? "")
                 })
                 
                 self?.view.didGetGifs(giphyViewModels)
             } else {
-                self?.view.errorOccurred(message: "Something went wrong whilst loading more gifs with this search term, please try again.")
+                self?.view.errorOccurred(message: localizedString(forKey: "general_error"))
             }
         }
         
@@ -114,17 +114,15 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
                     
                     GiphyCellViewModel(
                         gifUrl: x.images?.downsized?.url ?? "",
-                        title: x.title ?? "No title",
-                        sourceUrl: x.source ?? "Unknown",
-                        markedTrending: x.trending_datetime ?? "Never",
-                        username: x.username ?? "Unknown")
+                        title: x.title ?? "",
+                        sourceUrl: x.source ?? "",
+                        markedTrending: x.trending_datetime ?? "",
+                        username: x.username ?? "")
                 })
                 
                 self?.view.didGetGifs(giphyViewModels)
             } else {
-                print("FAILURE")
-                print("Show an error")
-                self?.view.errorOccurred(message: "Something went wrong whilst loading more gifs, please try again.")
+                self?.view.errorOccurred(message: localizedString(forKey: "general_error"))
             }
         }
     }

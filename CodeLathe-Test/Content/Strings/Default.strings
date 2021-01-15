@@ -9,6 +9,15 @@
 // -- General Messages -- //
 "general_error" = "Something went wrong, please try again";
 
+
+// -- GiphyAPIPresenter -- //
+"perform_a_valid_search" = "Please enter a valid search";
+
+
+// -- GiphyAPIViewController -- //
+"gift_of_gifs" = "Gift Of Gifs";
+"trending" = "Trending";
+
 // -- ViewShowcaseViewController -- //
 "take_a_look" = "Take a Look";
 "no_project_link" = "No Project Link";

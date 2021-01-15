@@ -28,11 +28,11 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Gift Of Gifs"
+        self.title = localizedString(forKey: "gift_of_gifs")
         
         self.view.backgroundColor = UIColor.appColor(.background)!
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Trending", style: .plain, target: self, action: #selector(showTrendingGifsTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: localizedString(forKey: "trending"), style: .plain, target: self, action: #selector(showTrendingGifsTapped))
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "CV", style: .plain, target: self, action: #selector(virtualCvTapped))
         

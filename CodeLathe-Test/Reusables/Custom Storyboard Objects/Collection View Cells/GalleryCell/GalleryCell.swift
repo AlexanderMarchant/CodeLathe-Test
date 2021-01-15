@@ -17,7 +17,6 @@ class GalleryCell: UICollectionViewCell {
         didSet {
             
             loadingView.setLoading(isLoading: true)
-            loadingView.updateLoadingMessage(message: "Loading image...")
             
             setupDropShadow()
             

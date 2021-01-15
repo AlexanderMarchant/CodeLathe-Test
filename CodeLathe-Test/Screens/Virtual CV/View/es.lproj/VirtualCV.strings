@@ -1,5 +1,12 @@
 
-/* Class = "UILabel"; text = "Skills"; ObjectID = "Aw4-ws-py7"; */
-"Aw4-ws-py7.text" = "Las Habilidades";
+/* Class = "UILabel"; text = "Bio"; ObjectID = "Ymt-Ur-oHy"; */
+"Ymt-Ur-oHy.text" = "La biografía";
 
-"GwK-Yc-rS9.text" = "La Galería"
+/* Class = "UILabel"; text = "Gallery"; ObjectID = "fs9-20-pOn"; */
+"fs9-20-pOn.text" = "La gallería";
+
+/* Class = "UILabel"; text = "Skills"; ObjectID = "jhE-QS-y1g"; */
+"jhE-QS-y1g.text" = "Las habilidades";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wdU-4L-eJH"; */
+"wdU-4L-eJH.text" = "";

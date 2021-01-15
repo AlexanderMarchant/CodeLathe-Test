@@ -3,11 +3,20 @@
   CodeLathe-Test
 
   Created by Alex Marchant on 13/01/2021.
-  
+ 
 */
 
 // -- General Messages -- //
 "general_error" = "Algo salió mal, por favor volver a intentar";
+
+
+// -- GiphyAPIPresenter -- //
+"perform_a_valid_search" = "Entra una entrada valida";
+
+
+// -- GiphyAPIViewController -- //
+"gift_of_gifs" = "El Regalo de Gifs";
+"trending" = "Las tendencias";
 
 // -- ViewShowcaseViewController -- //
 "take_a_look" = "Ver el proyecto";

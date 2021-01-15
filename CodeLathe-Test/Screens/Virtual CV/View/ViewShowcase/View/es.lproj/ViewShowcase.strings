@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Take a look"; ObjectID = "47E-No-x9B"; */
+"47E-No-x9B.normalTitle" = "Ver el proyecto";
+
+/* Class = "UILabel"; text = "Challenges Faced"; ObjectID = "HI8-Tw-dD3"; */
+"HI8-Tw-dD3.text" = "Los retos tuve";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "LSd-25-bVv"; */
+"LSd-25-bVv.text" = "La descripción";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dpQ-kB-JrG"; */
+"dpQ-kB-JrG.text" = "";
+
+/* Class = "UILabel"; text = "Technologies Used"; ObjectID = "k0F-sq-TAK"; */
+"k0F-sq-TAK.text" = "Tecnología utilizada";
