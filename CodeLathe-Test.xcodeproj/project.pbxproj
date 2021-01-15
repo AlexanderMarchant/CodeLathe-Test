@@ -67,6 +67,7 @@
 		D44CE00725B055E300880FD0 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CE00525B055E300880FD0 /* GalleryCell.swift */; };
 		D44CE00825B055E300880FD0 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44CE00625B055E300880FD0 /* GalleryCell.xib */; };
 		D44CE00E25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CE00D25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift */; };
+		D49E29B425B1ED90004CA331 /* UrlSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E29B325B1ED90004CA331 /* UrlSessionService.swift */; };
 		D4BAB7B625B0592500D21593 /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB7B525B0592500D21593 /* Candidate.swift */; };
 		D4BAB7BB25B0598F00D21593 /* CandidateSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB7BA25B0598F00D21593 /* CandidateSkill.swift */; };
 		D4BAB7C025B059C100D21593 /* CandidateGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB7BF25B059C100D21593 /* CandidateGallery.swift */; };
@@ -185,6 +186,7 @@
 		D44CE00525B055E300880FD0 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		D44CE00625B055E300880FD0 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
 		D44CE00D25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		D49E29B325B1ED90004CA331 /* UrlSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionService.swift; sourceTree = "<group>"; };
 		D4BAB7B525B0592500D21593 /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		D4BAB7BA25B0598F00D21593 /* CandidateSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateSkill.swift; sourceTree = "<group>"; };
 		D4BAB7BF25B059C100D21593 /* CandidateGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateGallery.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 		D44CDF1225AFB05800880FD0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D49E29B225B1ED7D004CA331 /* UrlSessionService */,
 				D4BAB88525B1B91300D21593 /* API */,
 				D4BAB82E25B0C69B00D21593 /* GiphyService */,
 				D4BAB81125B0912300D21593 /* UIApplicationHelperService */,
@@ -667,6 +670,14 @@
 				D4BAB7B525B0592500D21593 /* Candidate.swift */,
 			);
 			path = Candidate;
+			sourceTree = "<group>";
+		};
+		D49E29B225B1ED7D004CA331 /* UrlSessionService */ = {
+			isa = PBXGroup;
+			children = (
+				D49E29B325B1ED90004CA331 /* UrlSessionService.swift */,
+			);
+			path = UrlSessionService;
 			sourceTree = "<group>";
 		};
 		D4BAB7C925B05D3D00D21593 /* LoadingView */ = {
@@ -1032,6 +1043,7 @@
 				D44CDECF25AFAAA300880FD0 /* LocalizedString.swift in Sources */,
 				D44CDFF825AFD09E00880FD0 /* CVHeaderViewModel.swift in Sources */,
 				D4BAB84725B0DB1800D21593 /* GifTrendModel.swift in Sources */,
+				D49E29B425B1ED90004CA331 /* UrlSessionService.swift in Sources */,
 				D4BAB87225B0DEC700D21593 /* GiphyCell.swift in Sources */,
 				D44CDF4C25AFB4F300880FD0 /* CLSubTitle.swift in Sources */,
 				D4BAB80A25B0895B00D21593 /* ViewShowcasePresenterProtocol.swift in Sources */,

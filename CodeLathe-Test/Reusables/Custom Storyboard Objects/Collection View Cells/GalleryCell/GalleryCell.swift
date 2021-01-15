@@ -21,7 +21,7 @@ class GalleryCell: UICollectionViewCell {
             
             setupDropShadow()
             
-            downloadImage(from: model.imageUrl!) { [weak self] (data, response, error) in
+            UrlSessionService.shared.downloadImage(from: model.imageUrl!) { [weak self] (data, response, error) in
                 
                 guard let data = data,
                       let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -37,8 +37,6 @@ class GalleryCell: UICollectionViewCell {
                     
                     return
                 }
-                
-                print("Download Finished")
                 
                 DispatchQueue.main.async() { [weak self] in
                     self?.loadingView.setLoading(isLoading: false)
@@ -81,6 +79,7 @@ class GalleryCell: UICollectionViewCell {
         
         self.iconImageView.layer.cornerRadius = 10
     }
+    
     private func setupDropShadow() {
         
         if(self.traitCollection.userInterfaceStyle == .light) {
@@ -103,10 +102,6 @@ class GalleryCell: UICollectionViewCell {
             self.layer.shadowPath = nil
         }
         
-    }
-    
-    func downloadImage(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 
 }

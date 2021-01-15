@@ -14,7 +14,6 @@ class AppCoordinator: Coordinator {
     let giphyService: GiphyServiceProtocol
     let uiApplicationHelperService: UIApplicationHelperServiceProtocol
     
-
     // MARK: - Init
     
     init(navigationController: UINavigationController) {

@@ -30,11 +30,6 @@ class ViewShowcaseViewController: UIViewController, Storyboarded {
     @IBAction func takeALookButtonTapped(_ sender: Any) {
         viewShowcasePresenter.openProjectLink()
     }
-    
-    
-    func downloadImage(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-    }
 
 }
 
@@ -42,7 +37,7 @@ extension ViewShowcaseViewController: ViewShowcasePresenterView {
     func didGetShowcase(_ showcase: GalleryShowcase) {
         self.title = showcase.title
         
-        downloadImage(from: URL(string: showcase.displayImageUrl)!) { [weak self] (data, response, error) in
+        UrlSessionService.shared.downloadImage(from: URL(string: showcase.displayImageUrl)!) { [weak self] (data, response, error) in
                 
             guard let data = data,
                   let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -57,8 +52,6 @@ extension ViewShowcaseViewController: ViewShowcasePresenterView {
                 
                 return
             }
-            
-            print("Download Finished")
             
             DispatchQueue.main.async() { [weak self] in
                 self?.projectLogo.image = UIImage(data: data)

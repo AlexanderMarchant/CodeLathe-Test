@@ -34,7 +34,7 @@ class GiphyCell: UITableViewCell {
             
             self.gifMarkedTrendingDate.text = model.markedTrending
             self.gifSourceUrl.text = model.sourceUrl
-            self.gifUsername.text = model.username ?? "Unknown"
+            self.gifUsername.text = model.username
         }
     }
 
