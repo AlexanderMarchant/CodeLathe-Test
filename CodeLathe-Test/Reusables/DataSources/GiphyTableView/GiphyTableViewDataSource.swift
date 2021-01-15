@@ -8,17 +8,24 @@
 import Foundation
 import UIKit
 
+protocol GiphyTableViewDataSourceDelegate {
+    func loadNextGifSet()
+}
+
 class GiphyTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    let gifs: [GiphyCellViewModel]
+    private (set) var gifs: [GiphyCellViewModel]
     let tableView: UITableView
+    let delegate: GiphyTableViewDataSourceDelegate
     
     init(
         gifs: [GiphyCellViewModel],
-        tableView: UITableView) {
+        tableView: UITableView,
+        delegate: GiphyTableViewDataSourceDelegate) {
         
         self.gifs = gifs
         self.tableView = tableView
+        self.delegate = delegate
         
         self.tableView.backgroundColor = .clear
         
@@ -30,6 +37,14 @@ class GiphyTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
         
         super.init()
         
+    }
+    
+    func insertGifs(gifs: [GiphyCellViewModel]) {
+        self.gifs.append(contentsOf: gifs)
+    }
+    
+    func removeAllGifs() {
+        self.gifs = [GiphyCellViewModel]()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +64,14 @@ class GiphyTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        // Preload the next set
+        if(indexPath.row == self.gifs.count - 1) {
+            self.delegate.loadNextGifSet()
+        }
     }
     
 }

@@ -8,5 +8,14 @@
 import Foundation
 
 protocol GiphyServiceProtocol {
-    func getTrendingGifs(completion: @escaping (GifTrendModel?, Error?) -> Void)
+    
+    func getTrendingGifs(
+        limit: Int,
+        completion: @escaping (GifTrendModel?, Error?) -> Void)
+    
+    
+    func getGifsBySearch(
+        search: String,
+        limit: Int,
+        completion: @escaping (GifSearchModel?, Error?) -> Void)
 }

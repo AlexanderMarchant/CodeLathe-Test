@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyGif
 
 class GiphyCell: UITableViewCell {
     
@@ -18,28 +19,8 @@ class GiphyCell: UITableViewCell {
     var model: GiphyCellViewModel! {
         didSet {
             
-            downloadImage(from: model.gifUrl) { [weak self] (data, response, error) in
-            
-                guard let data = data,
-                      let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                      error == nil else {
-                    
-                    print("Something went wrong, log the error")
-                    print("ERROR: \(error!.localizedDescription)")
-                    
-                    DispatchQueue.main.async() { [weak self] in
-                        self?.gifImageView.image = UIImage(named: "image-not-found")!
-                    }
-                    
-                    return
-                }
-                
-                print("Download Finished")
-                
-                DispatchQueue.main.async() { [weak self] in
-                    self?.gifImageView.image = UIImage(data: data)
-                }
-            }
+            let loader = UIActivityIndicatorView(style: .medium)
+            gifImageView.setGifFromURL(model.gifUrl, customLoader: loader)
             
             self.gifTitleLabel.text = model.title
             
@@ -54,17 +35,14 @@ class GiphyCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.contentView.backgroundColor = UIColor.appColor(.background)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    func downloadImage(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
 }

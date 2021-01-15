@@ -9,5 +9,6 @@ import Foundation
 
 protocol GiphyAPIPresenterProtocol {
     func getTrendingGifs()
+    func getGifsBySearch(userSearch: String?)
     func didTapVirtualCv()
 }

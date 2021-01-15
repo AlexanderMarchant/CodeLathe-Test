@@ -35,6 +35,7 @@ class DataModel: Codable {
 
 class ImageModel: Codable {
     var fixed_width_small_still: ImageDetailModel?
+    var downsized: ImageDetailModel?
 }
 
 class ImageDetailModel: Codable {

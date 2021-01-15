@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -94,6 +94,8 @@
 		D4BAB86C25B0DE0200D21593 /* GiphyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB86B25B0DE0200D21593 /* GiphyCellViewModel.swift */; };
 		D4BAB87225B0DEC700D21593 /* GiphyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB87025B0DEC700D21593 /* GiphyCell.swift */; };
 		D4BAB87325B0DEC700D21593 /* GiphyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4BAB87125B0DEC700D21593 /* GiphyCell.xib */; };
+		D4BAB87925B101F500D21593 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = D4BAB87825B101F500D21593 /* SwiftyGif */; };
+		D4BAB87E25B114B400D21593 /* UIView-AddTopBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB87D25B114B400D21593 /* UIView-AddTopBorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +213,7 @@
 		D4BAB86B25B0DE0200D21593 /* GiphyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyCellViewModel.swift; sourceTree = "<group>"; };
 		D4BAB87025B0DEC700D21593 /* GiphyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyCell.swift; sourceTree = "<group>"; };
 		D4BAB87125B0DEC700D21593 /* GiphyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiphyCell.xib; sourceTree = "<group>"; };
+		D4BAB87D25B114B400D21593 /* UIView-AddTopBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-AddTopBorder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BAB87925B101F500D21593 /* SwiftyGif in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +695,7 @@
 			isa = PBXGroup;
 			children = (
 				D4BAB7D725B05E3E00D21593 /* UIView-FadeTransition.swift */,
+				D4BAB87D25B114B400D21593 /* UIView-AddTopBorder.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -841,6 +846,9 @@
 			dependencies = (
 			);
 			name = "CodeLathe-Test";
+			packageProductDependencies = (
+				D4BAB87825B101F500D21593 /* SwiftyGif */,
+			);
 			productName = "CodeLathe-Test";
 			productReference = D44CDE7325AFA89C00880FD0 /* CodeLathe-Test.app */;
 			productType = "com.apple.product-type.application";
@@ -913,6 +921,9 @@
 				es,
 			);
 			mainGroup = D44CDE6A25AFA89C00880FD0;
+			packageReferences = (
+				D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+			);
 			productRefGroup = D44CDE7425AFA89C00880FD0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -995,6 +1006,7 @@
 				D4BAB83025B0C6AE00D21593 /* GiphyServiceProtocol.swift in Sources */,
 				D44CDFEB25AFD08000880FD0 /* CVHeaderView.swift in Sources */,
 				D44CDF7425AFB70E00880FD0 /* CLSecondaryButton.swift in Sources */,
+				D4BAB87E25B114B400D21593 /* UIView-AddTopBorder.swift in Sources */,
 				D4BAB7CB25B05D5300D21593 /* LoadingView.swift in Sources */,
 				D44CDFA725AFB9BD00880FD0 /* GiphyAPIPresenterProtocol.swift in Sources */,
 				D44CDE7725AFA89C00880FD0 /* AppDelegate.swift in Sources */,
@@ -1392,6 +1404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kirualex/SwiftyGif.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4BAB87825B101F500D21593 /* SwiftyGif */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */;
+			productName = SwiftyGif;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D44CDE6B25AFA89C00880FD0 /* Project object */;
 }

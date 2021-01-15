@@ -63,16 +63,21 @@ class LoadingView: UIView {
         
         self.loadingIsShown = isLoading
         
-        self.isHidden = !isLoading
-        self.view.isHidden = !isLoading
-        activityIndicator.isHidden = !isLoading
-        
-        if(isLoading) {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
-            loadingMessage.text = "Please wait a second..."
+        DispatchQueue.main.async {
+            
+            self.isHidden = !isLoading
+            self.view.isHidden = !isLoading
+            self.activityIndicator.isHidden = !isLoading
+            
+            if(isLoading) {
+                self.activityIndicator.startAnimating()
+            } else {
+                self.activityIndicator.stopAnimating()
+                self.loadingMessage.text = "Please wait a second..."
+            }
+            
         }
+        self.loadingIsShown = isLoading
     }
     
     func updateLoadingMessage(message: String) {

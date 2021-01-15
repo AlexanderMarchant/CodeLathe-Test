@@ -13,6 +13,7 @@ protocol GiphyAPIPresenterDelegate {
 
 protocol GiphyAPIPresenterView {
     func didGetGifs(_ gifs: [GiphyCellViewModel])
+    func errorOccurred(message: String)
 }
 
 class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
@@ -32,16 +33,28 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
         
     }
     
-    func getTrendingGifs() {
-        self.giphyService.getTrendingGifs() { [weak self] (gifs, error) in
+    func getGifsBySearch(userSearch: String?) {
+        
+        guard var search = userSearch else {
+            self.view.errorOccurred(message: "Please enter a valid search")
+            return
+        }
+        
+        search = search.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if(search.isEmpty) {
+            self.view.errorOccurred(message: "Please enter a valid search")
+            return
+        }
+        
+        self.giphyService.getGifsBySearch(search: search, limit: 15) { [weak self] (gifs, error) in
+            
             if let gifs = gifs,
                error == nil {
                 
-//                var giphyViewModels: [GiphyCellViewModel]
-                
-                var giphyViewModels = gifs.data!.map({ x in
+                let giphyViewModels = gifs.data!.map({ x in
                     GiphyCellViewModel(
-                        gifUrl: x.embed_url!,
+                        gifUrl: x.images!.downsized!.url!,
                         title: x.title!,
                         sourceUrl: x.source!,
                         markedtrending: x.trending_datetime!,
@@ -49,11 +62,32 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
                 })
                 
                 self?.view.didGetGifs(giphyViewModels)
+            } else {
+                self?.view.errorOccurred(message: "Something went wrong whilst loading more gifs with this search term, please try again.")
+            }
+        }
+        
+    }
+    
+    func getTrendingGifs() {
+        self.giphyService.getTrendingGifs(limit: 15) { [weak self] (gifs, error) in
+            if let gifs = gifs,
+               error == nil {
                 
-                print("SUCCESS")
+                let giphyViewModels = gifs.data!.map({ x in
+                    GiphyCellViewModel(
+                        gifUrl: x.images!.downsized!.url!,
+                        title: x.title!,
+                        sourceUrl: x.source!,
+                        markedtrending: x.trending_datetime!,
+                        username: x.username)
+                })
+                
+                self?.view.didGetGifs(giphyViewModels)
             } else {
                 print("FAILURE")
                 print("Show an error")
+                self?.view.errorOccurred(message: "Something went wrong whilst loading more gifs, please try again.")
             }
         }
     }

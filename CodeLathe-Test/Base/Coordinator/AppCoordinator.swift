@@ -23,7 +23,6 @@ class AppCoordinator: Coordinator {
         self.giphyService = GiphyService()
         self.uiApplicationHelperService = UIApplicationHelperService()
         
-        
         self.navigationController.navigationBar.tintColor = UIColor.appColor(.body)
         self.navigationController.navigationBar.barTintColor = UIColor.appColor(.background)!
         self.navigationController.navigationBar.shadowImage = UIImage()
