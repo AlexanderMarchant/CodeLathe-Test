@@ -10,6 +10,7 @@
 "general_error" = "Something went wrong, please try again";
 "ok" = "OK";
 "warning" = "Warning";
+"cannot_send_email_error" = "To send an email through the app, you must first connect an email to the mail app.";
 
 // -- GiphyAPIPresenter -- //
 "perform_a_valid_search" = "Please enter a valid search";

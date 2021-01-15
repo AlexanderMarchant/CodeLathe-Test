@@ -10,6 +10,7 @@
 "general_error" = "Algo salió mal, por favor volver a intentar";
 "ok" = "Vale";
 "warning" = "Advertencia";
+"cannot_send_email_error" = "Si quisieras enviar un correo con la aplicación, tienes que conectar un correo en la aplicación 'Correo' de Apple.";
 
 
 // -- GiphyAPIPresenter -- //

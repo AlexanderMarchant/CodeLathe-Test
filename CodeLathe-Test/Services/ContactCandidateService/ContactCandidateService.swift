@@ -39,7 +39,7 @@ class ContactCandidateService: NSObject {
         } else {
             AlertHandlerService.shared.showWarningAlert(
                 view: viewController,
-                message: "You must set up an email app on your phone before you can send emails through this app.")
+                message: "cannot_send_email_error")
         }
     }
     
