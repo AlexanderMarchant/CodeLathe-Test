@@ -8,6 +8,8 @@
 
 // -- General Messages -- //
 "general_error" = "Algo salió mal, por favor volver a intentar";
+"ok" = "Vale";
+"warning" = "Advertencia";
 
 
 // -- GiphyAPIPresenter -- //

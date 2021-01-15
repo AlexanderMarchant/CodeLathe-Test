@@ -8,7 +8,8 @@
 
 // -- General Messages -- //
 "general_error" = "Something went wrong, please try again";
-
+"ok" = "OK";
+"warning" = "Warning";
 
 // -- GiphyAPIPresenter -- //
 "perform_a_valid_search" = "Please enter a valid search";

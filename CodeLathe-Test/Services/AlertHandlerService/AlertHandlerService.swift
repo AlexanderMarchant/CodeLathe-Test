@@ -16,12 +16,12 @@ class AlertHandlerService {
     
     func showWarningAlert(view: UIViewController, message: String) {
         let alert = UIAlertController(
-            title: "Warning",
+            title: localizedString(forKey: "warning"),
             message: message,
             preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(
-            title: "OK",
+            title: localizedString(forKey: "ok"),
             style: UIAlertAction.Style.default,
             handler: nil))
         
@@ -45,21 +45,6 @@ class AlertHandlerService {
             
             alert.addAction(action)
         }
-        
-        DispatchQueue.main.async {
-            view.present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    func showGeneralErrorAlert(view: UIViewController) {
-        let alert = UIAlertController(
-            title: "Oh no",
-            message: "Apologies, something went wrong on our end; please restart the app. \n\n If this continues to occur please email support.",
-            preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: "OK",
-                                      style: UIAlertAction.Style.default,
-                                      handler: nil))
         
         DispatchQueue.main.async {
             view.present(alert, animated: true, completion: nil)
