@@ -11,6 +11,7 @@ class ViewShowcaseViewController: UIViewController, Storyboarded {
     
     var viewShowcasePresenter: ViewShowcasePresenterProtocol!
     
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var projectLogo: UIImageView!
     @IBOutlet weak var descriptionLabel: CLBody!
     @IBOutlet weak var technologiesUsedLabel: CLBody!
@@ -25,10 +26,6 @@ class ViewShowcaseViewController: UIViewController, Storyboarded {
         self.takeALookButton.setTitle(localizedString(forKey: "take_a_look"), for: .normal)
 
         viewShowcasePresenter.getShowcase()
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        self.view.layoutIfNeeded()
     }
     
     @IBAction func takeALookButtonTapped(_ sender: Any) {

@@ -104,13 +104,14 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="OPX-pa-FgG" firstAttribute="leading" secondItem="0QW-SF-pOz" secondAttribute="leading" id="0uE-FV-Hih"/>
+                                    <constraint firstItem="OPX-pa-FgG" firstAttribute="trailing" secondItem="zmi-de-SlO" secondAttribute="trailing" id="0zL-vk-izX"/>
                                     <constraint firstItem="47E-No-x9B" firstAttribute="leading" secondItem="cUP-jW-B3F" secondAttribute="leading" constant="25" id="CIG-4Y-KAN"/>
-                                    <constraint firstItem="OPX-pa-FgG" firstAttribute="top" secondItem="0QW-SF-pOz" secondAttribute="top" id="Dff-mA-lgY"/>
                                     <constraint firstItem="cUP-jW-B3F" firstAttribute="bottom" secondItem="47E-No-x9B" secondAttribute="bottom" constant="25" id="EDB-7W-Gju"/>
-                                    <constraint firstAttribute="bottom" secondItem="OPX-pa-FgG" secondAttribute="bottom" id="Gdu-Ba-AeA"/>
-                                    <constraint firstAttribute="trailing" secondItem="OPX-pa-FgG" secondAttribute="trailing" id="XhG-ie-maf"/>
+                                    <constraint firstItem="OPX-pa-FgG" firstAttribute="leading" secondItem="zmi-de-SlO" secondAttribute="leading" id="H5X-FD-21d"/>
+                                    <constraint firstItem="OPX-pa-FgG" firstAttribute="bottom" secondItem="zmi-de-SlO" secondAttribute="bottom" id="OeX-MY-mO5"/>
+                                    <constraint firstItem="OPX-pa-FgG" firstAttribute="width" secondItem="cUP-jW-B3F" secondAttribute="width" multiplier="1:1" id="UxP-8c-Ucd"/>
                                     <constraint firstItem="cUP-jW-B3F" firstAttribute="trailing" secondItem="47E-No-x9B" secondAttribute="trailing" constant="25" id="exi-jp-naN"/>
+                                    <constraint firstItem="OPX-pa-FgG" firstAttribute="top" secondItem="zmi-de-SlO" secondAttribute="top" id="sU5-79-gnJ"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="zmi-de-SlO"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="cUP-jW-B3F"/>
@@ -119,7 +120,6 @@
                         <viewLayoutGuide key="safeArea" id="OzT-HV-msL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OPX-pa-FgG" firstAttribute="width" secondItem="zqU-lM-U89" secondAttribute="width" id="B1z-aL-3Y2"/>
                             <constraint firstItem="0QW-SF-pOz" firstAttribute="leading" secondItem="OzT-HV-msL" secondAttribute="leading" id="KtF-eD-BNk"/>
                             <constraint firstAttribute="bottom" secondItem="0QW-SF-pOz" secondAttribute="bottom" id="MlF-Wn-ADV"/>
                             <constraint firstItem="0QW-SF-pOz" firstAttribute="top" secondItem="zqU-lM-U89" secondAttribute="top" id="aEI-2T-JzN"/>
@@ -129,6 +129,7 @@
                     </view>
                     <connections>
                         <outlet property="challengesLabel" destination="OcH-Ih-OaL" id="4lw-Sj-AXE"/>
+                        <outlet property="contentView" destination="OPX-pa-FgG" id="UrX-GJ-ziH"/>
                         <outlet property="descriptionLabel" destination="dpQ-kB-JrG" id="VXv-6b-iMe"/>
                         <outlet property="projectLogo" destination="mhN-yO-yM4" id="vCO-Gf-0bV"/>
                         <outlet property="takeALookButton" destination="47E-No-x9B" id="4QI-k0-Scg"/>

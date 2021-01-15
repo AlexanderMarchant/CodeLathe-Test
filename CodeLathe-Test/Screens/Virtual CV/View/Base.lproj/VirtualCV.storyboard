@@ -10,153 +10,165 @@
     </dependencies>
     <scenes>
         <!--VirtualCV View Controller-->
-        <scene sceneID="dc6-KE-teN">
+        <scene sceneID="RaA-ic-iXt">
             <objects>
-                <viewController storyboardIdentifier="VirtualCVViewController" id="EJf-iq-KX5" customClass="VirtualCVViewController" customModule="CodeLathe_Test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pfI-f0-S83">
+                <viewController storyboardIdentifier="VirtualCVViewController" id="BlD-NZ-c06" customClass="VirtualCVViewController" customModule="CodeLathe_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fki-8y-E3x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bea-Ve-p0M">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYi-Oh-5wX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GwK-Yc-rS9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mJg-jQ-lEY">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCV-8v-Z1i" customClass="CVHeaderView" customModule="CodeLathe_Test" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="25" width="414" height="110"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPv-Fq-x1Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxI-zO-dRo" customClass="CVHeaderView" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="414" height="110"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" priority="750" constant="110" id="phv-gr-WPE"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhE-QS-y1g" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                        <rect key="frame" x="25" y="160" width="39.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C07-SS-EMl">
+                                                        <rect key="frame" x="25" y="205.5" width="364" height="150"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="FJj-cx-Rbl"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="sIr-b6-3XJ">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SkillCell" id="VMU-GM-qk3" customClass="SkillCell" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vz8-NC-DgM">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </collectionViewCellContentView>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymt-Ur-oHy" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                        <rect key="frame" x="25" y="380.5" width="24.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdU-4L-eJH" customClass="CLBody" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                        <rect key="frame" x="25" y="426" width="364" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs9-20-pOn" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                        <rect key="frame" x="25" y="471.5" width="53.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="41Z-ED-5Om">
+                                                        <rect key="frame" x="0.0" y="517" width="414" height="135"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="135" id="VkZ-1g-9Ic"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Blw-59-NL6">
+                                                            <size key="itemSize" width="100" height="100"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCell" id="MTr-83-fli" customClass="GalleryCell" customModule="CodeLathe_Test" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="17.5" width="100" height="100"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="n7J-yi-aUc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </collectionViewCellContentView>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" priority="750" constant="110" id="Hiy-qq-eor"/>
+                                                    <constraint firstItem="41Z-ED-5Om" firstAttribute="leading" secondItem="yPv-Fq-x1Z" secondAttribute="leading" id="6uh-xC-cmZ"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jhE-QS-y1g" secondAttribute="trailing" constant="25" id="A0r-am-lln"/>
+                                                    <constraint firstItem="jhE-QS-y1g" firstAttribute="leading" secondItem="yPv-Fq-x1Z" secondAttribute="leading" constant="25" id="EhA-Sc-5Ga"/>
+                                                    <constraint firstItem="C07-SS-EMl" firstAttribute="leading" secondItem="yPv-Fq-x1Z" secondAttribute="leading" constant="25" id="F45-PT-Yxt"/>
+                                                    <constraint firstItem="MxI-zO-dRo" firstAttribute="top" secondItem="yPv-Fq-x1Z" secondAttribute="top" constant="25" id="G0I-T7-x3V"/>
+                                                    <constraint firstItem="wdU-4L-eJH" firstAttribute="top" secondItem="Ymt-Ur-oHy" secondAttribute="bottom" constant="25" id="Iai-pe-Z0U"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fs9-20-pOn" secondAttribute="trailing" constant="25" id="LI2-93-38d"/>
+                                                    <constraint firstItem="MxI-zO-dRo" firstAttribute="leading" secondItem="yPv-Fq-x1Z" secondAttribute="leading" id="LVW-wu-U9q"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ymt-Ur-oHy" secondAttribute="trailing" constant="25" id="OGX-s0-NnA"/>
+                                                    <constraint firstItem="41Z-ED-5Om" firstAttribute="top" secondItem="fs9-20-pOn" secondAttribute="bottom" constant="25" id="UtN-7G-CrX"/>
+                                                    <constraint firstItem="fs9-20-pOn" firstAttribute="top" secondItem="wdU-4L-eJH" secondAttribute="bottom" constant="25" id="VPn-4D-LiL"/>
+                                                    <constraint firstItem="wdU-4L-eJH" firstAttribute="leading" secondItem="yPv-Fq-x1Z" secondAttribute="leading" constant="25" id="axP-3g-RuQ"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="41Z-ED-5Om" secondAttribute="bottom" constant="25" id="b1l-7e-xI7"/>
+                                                    <constraint firstItem="Ymt-Ur-oHy" firstAttribute="top" secondItem="C07-SS-EMl" secondAttribute="bottom" constant="25" id="gOI-Yg-DOX"/>
+                                                    <constraint firstItem="jhE-QS-y1g" firstAttribute="top" secondItem="MxI-zO-dRo" secondAttribute="bottom" constant="25" id="gU3-uj-4jy"/>
+                                                    <constraint firstItem="C07-SS-EMl" firstAttribute="top" secondItem="jhE-QS-y1g" secondAttribute="bottom" constant="25" id="hsu-Xc-TAX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="C07-SS-EMl" secondAttribute="trailing" constant="25" id="hud-ql-Qi2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wdU-4L-eJH" secondAttribute="trailing" constant="25" id="jUF-4m-1d1"/>
+                                                    <constraint firstItem="fs9-20-pOn" firstAttribute="leading" secondItem="yPv-Fq-x1Z" secondAttribute="leading" constant="25" id="svZ-JB-PiM"/>
+                                                    <constraint firstItem="Ymt-Ur-oHy" firstAttribute="leading" secondItem="yPv-Fq-x1Z" secondAttribute="leading" constant="25" id="v91-qN-fMa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MxI-zO-dRo" secondAttribute="trailing" id="x5v-Fg-CWJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="41Z-ED-5Om" secondAttribute="trailing" id="ySz-Wz-06M"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aw4-ws-py7" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="160" width="39.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FfP-tK-Q6j">
-                                                <rect key="frame" x="25" y="206" width="364" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="vS8-bR-jOd"/>
-                                                </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="x5G-JG-gmk">
-                                                    <size key="itemSize" width="128" height="128"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SkillCell" id="fxe-EI-lq4" customClass="SkillCell" customModule="CodeLathe_Test" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TMe-sU-Poi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </collectionViewCellContentView>
-                                                    </collectionViewCell>
-                                                </cells>
-                                            </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l3-hA-zon" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="381" width="24.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJA-1t-hjg" customClass="CLBody" customModule="CodeLathe_Test" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="427" width="364" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7E-Ds-q4M" customClass="CLHeader" customModule="CodeLathe_Test" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="472.5" width="53.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vdF-sf-U5c">
-                                                <rect key="frame" x="0.0" y="518.5" width="414" height="135"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="135" id="gT8-4b-ys7"/>
-                                                </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="QYp-tI-WJC">
-                                                    <size key="itemSize" width="100" height="100"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCell" id="sPS-gG-FSd" customClass="GalleryCell" customModule="CodeLathe_Test" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="17.5" width="100" height="100"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="q1W-Fj-0Gi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </collectionViewCellContentView>
-                                                    </collectionViewCell>
-                                                </cells>
-                                            </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="hJA-1t-hjg" firstAttribute="leading" secondItem="GwK-Yc-rS9" secondAttribute="leading" constant="25" id="0ZC-uJ-2KS"/>
-                                            <constraint firstItem="vdF-sf-U5c" firstAttribute="top" secondItem="K7E-Ds-q4M" secondAttribute="bottom" constant="25" id="21q-CX-snZ"/>
-                                            <constraint firstItem="FfP-tK-Q6j" firstAttribute="top" secondItem="Aw4-ws-py7" secondAttribute="bottom" constant="25" id="5bf-mc-nwu"/>
-                                            <constraint firstItem="9l3-hA-zon" firstAttribute="top" secondItem="FfP-tK-Q6j" secondAttribute="bottom" constant="25" id="9SQ-T9-Tei"/>
-                                            <constraint firstItem="K7E-Ds-q4M" firstAttribute="top" secondItem="hJA-1t-hjg" secondAttribute="bottom" constant="25" id="9yE-G1-fLM"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Aw4-ws-py7" secondAttribute="trailing" constant="25" id="AIQ-KW-Cbz"/>
-                                            <constraint firstAttribute="trailing" secondItem="XCV-8v-Z1i" secondAttribute="trailing" id="Gna-5a-TlF"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vdF-sf-U5c" secondAttribute="bottom" constant="25" id="HsE-Zh-pod"/>
-                                            <constraint firstItem="XCV-8v-Z1i" firstAttribute="leading" secondItem="GwK-Yc-rS9" secondAttribute="leading" id="JMb-Kp-fAk"/>
-                                            <constraint firstItem="FfP-tK-Q6j" firstAttribute="leading" secondItem="GwK-Yc-rS9" secondAttribute="leading" constant="25" id="RDE-3U-Mg1"/>
-                                            <constraint firstItem="9l3-hA-zon" firstAttribute="leading" secondItem="GwK-Yc-rS9" secondAttribute="leading" constant="25" id="XJw-9R-3in"/>
-                                            <constraint firstAttribute="trailing" secondItem="FfP-tK-Q6j" secondAttribute="trailing" constant="25" id="aEH-Re-0cL"/>
-                                            <constraint firstItem="Aw4-ws-py7" firstAttribute="leading" secondItem="GwK-Yc-rS9" secondAttribute="leading" constant="25" id="dMY-dh-auo"/>
-                                            <constraint firstItem="vdF-sf-U5c" firstAttribute="leading" secondItem="GwK-Yc-rS9" secondAttribute="leading" id="gJl-3X-tiE"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="K7E-Ds-q4M" secondAttribute="trailing" constant="25" id="grz-lG-zzG"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9l3-hA-zon" secondAttribute="trailing" constant="25" id="j1K-ee-N6p"/>
-                                            <constraint firstItem="Aw4-ws-py7" firstAttribute="top" secondItem="XCV-8v-Z1i" secondAttribute="bottom" constant="25" id="jbJ-9i-0PP"/>
-                                            <constraint firstItem="hJA-1t-hjg" firstAttribute="top" secondItem="9l3-hA-zon" secondAttribute="bottom" constant="25" id="rsn-gb-uK6"/>
-                                            <constraint firstAttribute="trailing" secondItem="vdF-sf-U5c" secondAttribute="trailing" id="u6M-PP-Yi1"/>
-                                            <constraint firstItem="XCV-8v-Z1i" firstAttribute="top" secondItem="GwK-Yc-rS9" secondAttribute="top" constant="25" id="uBZ-gh-IR7"/>
-                                            <constraint firstItem="K7E-Ds-q4M" firstAttribute="leading" secondItem="GwK-Yc-rS9" secondAttribute="leading" constant="25" id="wHR-Oa-k8a"/>
-                                            <constraint firstAttribute="trailing" secondItem="hJA-1t-hjg" secondAttribute="trailing" constant="25" id="wU6-lv-o7O"/>
+                                            <constraint firstAttribute="bottom" secondItem="yPv-Fq-x1Z" secondAttribute="bottom" id="96x-KO-rvU"/>
+                                            <constraint firstItem="yPv-Fq-x1Z" firstAttribute="top" secondItem="mJg-jQ-lEY" secondAttribute="top" id="Oow-gi-QSK"/>
+                                            <constraint firstAttribute="trailing" secondItem="yPv-Fq-x1Z" secondAttribute="trailing" id="lNS-Wc-OHk"/>
+                                            <constraint firstItem="yPv-Fq-x1Z" firstAttribute="leading" secondItem="mJg-jQ-lEY" secondAttribute="leading" id="vTY-Yw-off"/>
                                         </constraints>
-                                    </view>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="GwK-Yc-rS9" firstAttribute="trailing" secondItem="bea-Ve-p0M" secondAttribute="trailing" id="6tN-cg-Odb"/>
-                                    <constraint firstItem="GwK-Yc-rS9" firstAttribute="top" secondItem="bea-Ve-p0M" secondAttribute="top" id="S0x-vF-rcO"/>
-                                    <constraint firstItem="GwK-Yc-rS9" firstAttribute="bottom" secondItem="bea-Ve-p0M" secondAttribute="bottom" id="UoA-gk-aSe"/>
-                                    <constraint firstItem="GwK-Yc-rS9" firstAttribute="leading" secondItem="bea-Ve-p0M" secondAttribute="leading" id="nBd-dt-yWa"/>
+                                    <constraint firstItem="mJg-jQ-lEY" firstAttribute="width" secondItem="Zjd-bk-v0z" secondAttribute="width" id="28F-g3-woM"/>
+                                    <constraint firstItem="mJg-jQ-lEY" firstAttribute="top" secondItem="dxt-l2-iCY" secondAttribute="top" id="ZbZ-5q-eYX"/>
+                                    <constraint firstItem="mJg-jQ-lEY" firstAttribute="bottom" secondItem="dxt-l2-iCY" secondAttribute="bottom" id="g3Z-38-dr8"/>
+                                    <constraint firstItem="mJg-jQ-lEY" firstAttribute="trailing" secondItem="dxt-l2-iCY" secondAttribute="trailing" id="nZT-FF-sKf"/>
+                                    <constraint firstItem="mJg-jQ-lEY" firstAttribute="leading" secondItem="dxt-l2-iCY" secondAttribute="leading" id="s3A-sN-KeQ"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="JWw-3L-st9"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="XQQ-as-0Tr"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="dxt-l2-iCY"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Zjd-bk-v0z"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="r88-8y-syk"/>
+                        <viewLayoutGuide key="safeArea" id="Rl9-OW-qpC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bea-Ve-p0M" firstAttribute="top" secondItem="pfI-f0-S83" secondAttribute="top" id="78q-OI-BAF"/>
-                            <constraint firstItem="bea-Ve-p0M" firstAttribute="leading" secondItem="r88-8y-syk" secondAttribute="leading" id="QUt-wY-U42"/>
-                            <constraint firstItem="GwK-Yc-rS9" firstAttribute="width" secondItem="pfI-f0-S83" secondAttribute="width" id="bl4-Lu-a7b"/>
-                            <constraint firstAttribute="bottom" secondItem="bea-Ve-p0M" secondAttribute="bottom" id="dXF-9S-yXp"/>
-                            <constraint firstItem="GwK-Yc-rS9" firstAttribute="height" secondItem="pfI-f0-S83" secondAttribute="height" priority="250" id="jKh-Ed-kB0"/>
-                            <constraint firstItem="bea-Ve-p0M" firstAttribute="trailing" secondItem="r88-8y-syk" secondAttribute="trailing" id="jco-No-gPF"/>
+                            <constraint firstAttribute="bottom" secondItem="JYi-Oh-5wX" secondAttribute="bottom" id="3gE-Fj-6cy"/>
+                            <constraint firstItem="JYi-Oh-5wX" firstAttribute="leading" secondItem="Rl9-OW-qpC" secondAttribute="leading" id="5sg-GT-oMT"/>
+                            <constraint firstItem="JYi-Oh-5wX" firstAttribute="top" secondItem="Fki-8y-E3x" secondAttribute="top" id="JEa-El-IJd"/>
+                            <constraint firstItem="yPv-Fq-x1Z" firstAttribute="height" secondItem="Fki-8y-E3x" secondAttribute="height" priority="250" id="M31-Wr-GHC"/>
+                            <constraint firstItem="JYi-Oh-5wX" firstAttribute="trailing" secondItem="Rl9-OW-qpC" secondAttribute="trailing" id="lem-rR-7nZ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bioLabel" destination="hJA-1t-hjg" id="ARj-D1-rg0"/>
-                        <outlet property="cvHeaderView" destination="XCV-8v-Z1i" id="mA8-Wd-rrX"/>
-                        <outlet property="galleryCollectionView" destination="vdF-sf-U5c" id="6CO-Pj-alC"/>
-                        <outlet property="skillsCollectionView" destination="FfP-tK-Q6j" id="IEo-Rv-zK8"/>
+                        <outlet property="bioLabel" destination="wdU-4L-eJH" id="nzG-Kb-xgU"/>
+                        <outlet property="cvHeaderView" destination="MxI-zO-dRo" id="4nw-B5-PDD"/>
+                        <outlet property="galleryCollectionView" destination="41Z-ED-5Om" id="KbW-OY-1oi"/>
+                        <outlet property="scrollView" destination="JYi-Oh-5wX" id="tyB-Uw-i1h"/>
+                        <outlet property="skillsCollectionView" destination="C07-SS-EMl" id="OjR-QI-XLa"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K0m-aM-b0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cmz-HL-EHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273.91304347826087" y="6.6964285714285712"/>
+            <point key="canvasLocation" x="-516" y="7"/>
         </scene>
     </scenes>
     <resources>

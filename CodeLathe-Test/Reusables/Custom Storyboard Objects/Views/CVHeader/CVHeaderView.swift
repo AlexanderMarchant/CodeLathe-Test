@@ -50,6 +50,7 @@ class CVHeaderView: UIView {
         self.view.backgroundColor = UIColor.appColor(.background)!
         self.view.frame = self.bounds
         self.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.layer.masksToBounds = true
         
         setupView()
     }

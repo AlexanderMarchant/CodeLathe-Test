@@ -11,6 +11,7 @@ class VirtualCVViewController: UIViewController, Storyboarded {
     
     var virtualCVPresenter: VirtualCVPresenterProtocol!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var cvHeaderView: CVHeaderView!
     @IBOutlet weak var skillsCollectionView: UICollectionView!
     @IBOutlet weak var galleryCollectionView: UICollectionView!
@@ -74,7 +75,6 @@ extension VirtualCVViewController: VirtualCVPresenterView {
         galleryCollectionView.delegate = galleryCollectionViewDataSource
         
         bioLabel.text = candidate.bio
-        
     }
 }
 

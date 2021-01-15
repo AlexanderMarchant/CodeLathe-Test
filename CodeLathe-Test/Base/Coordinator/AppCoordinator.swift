@@ -45,7 +45,6 @@ class AppCoordinator: Coordinator {
         self.navigationController.dismissKeyboardOnTap()
         
         showGiphyAPI()
-        
     }
 
     // MARK: - Show Giphy API
