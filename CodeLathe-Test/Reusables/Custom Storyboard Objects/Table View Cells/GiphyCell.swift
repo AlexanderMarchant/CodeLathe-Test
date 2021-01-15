@@ -20,7 +20,12 @@ class GiphyCell: UITableViewCell {
         didSet {
             
             let loader = UIActivityIndicatorView(style: .medium)
-            gifImageView.setGifFromURL(model.gifUrl, customLoader: loader)
+            
+            if let gifUrl = model.gifUrl {
+                gifImageView.setGifFromURL(gifUrl, customLoader: loader)
+            } else {
+                gifImageView.image = UIImage(named: "image-not-found")
+            }
             
             self.gifTitleLabel.text = model.title
             

@@ -22,6 +22,9 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
     let delegate: GiphyAPIPresenterDelegate
     let view: GiphyAPIPresenterView
     
+    private var currentSearch: GiphySearch?
+    private var currentSearchTerm: String?
+    
     init(
         _ giphyService: GiphyServiceProtocol,
         with view: GiphyAPIPresenterView,
@@ -33,7 +36,34 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
         
     }
     
-    func getGifsBySearch(userSearch: String?) {
+    func getGifs(by searchType: GiphySearch, searchTerm: String? = nil) {
+        
+        self.giphyService.resetTrendingSearch()
+        self.giphyService.resetSearchByTermSearch()
+        
+        switch searchType {
+        case .trending:
+            self.getTrendingGifs()
+        case .bySearchTerm:
+            self.getGifsBySearchTerm(userSearch: searchTerm)
+        }
+    }
+    
+    func loadNextGifSet() {
+        guard let currentSearch = currentSearch else {
+            self.view.errorOccurred(message: "Please perform a search")
+            return
+        }
+        
+        switch currentSearch {
+        case .bySearchTerm:
+            self.getGifsBySearchTerm(userSearch: currentSearchTerm!)
+        case .trending:
+            self.getTrendingGifs()
+        }
+    }
+    
+    internal func getGifsBySearchTerm(userSearch: String?) {
         
         guard var search = userSearch else {
             self.view.errorOccurred(message: "Please enter a valid search")
@@ -47,9 +77,10 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
             return
         }
         
-        // Need to reset the current offset when a new search is done
+        self.currentSearch = .bySearchTerm
+        self.currentSearchTerm = search
         
-        self.giphyService.getGifsBySearch(search: search, limit: 15) { [weak self] (gifs, error) in
+        self.giphyService.getGifsBySearchTerm(search: search, limit: 15) { [weak self] (gifs, error) in
             
             if let gifs = gifs,
                error == nil {
@@ -59,7 +90,7 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
                         gifUrl: x.images!.downsized!.url!,
                         title: x.title ?? "No title",
                         sourceUrl: x.source ?? "Unknown",
-                        markedtrending: x.trending_datetime ?? "Never",
+                        markedTrending: x.trending_datetime ?? "Never",
                         username: x.username ?? "Unknown")
                 })
                 
@@ -72,16 +103,20 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
     }
     
     func getTrendingGifs() {
+        
+        self.currentSearch = .trending
+        
         self.giphyService.getTrendingGifs(limit: 15) { [weak self] (gifs, error) in
             if let gifs = gifs,
                error == nil {
                 
                 let giphyViewModels = gifs.data!.map({ x in
+                    
                     GiphyCellViewModel(
-                        gifUrl: x.images!.downsized!.url!,
+                        gifUrl: x.images?.downsized?.url ?? "",
                         title: x.title ?? "No title",
                         sourceUrl: x.source ?? "Unknown",
-                        markedtrending: x.trending_datetime ?? "Never",
+                        markedTrending: x.trending_datetime ?? "Never",
                         username: x.username ?? "Unknown")
                 })
                 

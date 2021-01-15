@@ -7,12 +7,25 @@
 
 import Foundation
 
+enum GiphySearch {
+    case bySearchTerm
+    case trending
+}
+
 class GiphyService: GiphyServiceProtocol {
     
     init() {}
     
-    var currentTrendingOffeset = 0
-    var currentSearchOffset = 0
+    fileprivate var currentTrendingOffeset = 0
+    fileprivate var currentSearchOffset = 0
+    
+    func resetTrendingSearch() {
+        self.currentTrendingOffeset = 0
+    }
+    
+    func resetSearchByTermSearch() {
+        self.currentSearchOffset = 0
+    }
     
     func getTrendingGifs(
         limit: Int,
@@ -34,7 +47,7 @@ class GiphyService: GiphyServiceProtocol {
                     let decoder = JSONDecoder()
                     let gifs = try decoder.decode(GifTrendModel.self, from: data)
                     
-                    self.currentSearchOffset += limit
+                    self.currentTrendingOffeset += limit
                     completion(gifs, nil)
                 } catch {
                     print("log an error")
@@ -48,7 +61,7 @@ class GiphyService: GiphyServiceProtocol {
         }
     }
     
-    func getGifsBySearch(
+    func getGifsBySearchTerm(
         search: String,
         limit: Int,
         completion: @escaping (GifSearchModel?, Error?) -> Void) {

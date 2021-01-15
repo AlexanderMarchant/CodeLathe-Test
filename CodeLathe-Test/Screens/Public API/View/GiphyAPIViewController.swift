@@ -32,6 +32,8 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
         
         self.view.backgroundColor = UIColor.appColor(.background)!
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Trending", style: .plain, target: self, action: #selector(showTrendingGifsTapped))
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "CV", style: .plain, target: self, action: #selector(virtualCvTapped))
         
         self.toolbarView.addTopBorder(with: UIColor.appColor(.borders)!, andWidth: 1)
@@ -51,7 +53,7 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
         searchButton.titleLabel?.font = Fonts.buttonFont
         searchButton.setTitleColor(UIColor.appColor(.body), for: .normal)
         
-        giphyAPIPresenter.getTrendingGifs()
+        giphyAPIPresenter.getGifs(by: .trending, searchTerm: nil)
         
         setLoading(isLoading: true)
     }
@@ -78,19 +80,19 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
         setupTextFields()
     }
     
+    @objc func showTrendingGifsTapped() {
+        clearTableView()
+        giphyAPIPresenter.getGifs(by: .trending, searchTerm: nil)
+    }
+    
     @objc func virtualCvTapped() {
         giphyAPIPresenter.didTapVirtualCv()
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
         setLoading(isLoading: true)
-        self.giphyAPIPresenter.getGifsBySearch(userSearch: searchTextField.text)
-        self.giphyTableViewDataSource?.removeAllGifs()
-        
-        DispatchQueue.main.async {
-            self.giphyTableView.reloadData()
-            self.dismissKeyboard()
-        }
+        clearTableView()
+        giphyAPIPresenter.getGifs(by: .bySearchTerm, searchTerm: searchTextField.text)
     }
     
     func setLoading(isLoading: Bool) {
@@ -130,6 +132,15 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
             self.view.frame.origin.y = 0
             self.placeholderSearchTextField.text = ""
             self.searchTextFieldContainerView.isHidden = false
+        }
+    }
+    
+    func clearTableView() {
+        self.giphyTableViewDataSource?.removeAllGifs()
+        
+        DispatchQueue.main.async {
+            self.giphyTableView.reloadData()
+            self.dismissKeyboard()
         }
     }
 
@@ -183,13 +194,13 @@ extension GiphyAPIViewController: GiphyAPIPresenterView {
 
 extension GiphyAPIViewController: GiphyTableViewDataSourceDelegate {
     func loadNextGifSet() {
-        // This should just call for the enxt lot of gifs, not particularly the trending gifs
-        self.giphyAPIPresenter.getTrendingGifs()
+        self.giphyAPIPresenter.loadNextGifSet()
     }
     
     func errorOccurred(message: String) {
         setLoading(isLoading: false)
-        self.giphyAPIPresenter.getTrendingGifs()
         AlertHandlerService.shared.showWarningAlert(view: self, message: message)
+        clearTableView()
+        giphyAPIPresenter.getGifs(by: .trending, searchTerm: nil)
     }
 }
