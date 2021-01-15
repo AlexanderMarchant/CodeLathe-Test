@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import DZNEmptyDataSet
 
 protocol GiphyTableViewDataSourceDelegate {
     func loadNextGifSet()
@@ -27,15 +28,17 @@ class GiphyTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
         self.tableView = tableView
         self.delegate = delegate
         
+        super.init()
+        
         self.tableView.backgroundColor = .clear
+        self.tableView.emptyDataSetSource = self
+        self.tableView.emptyDataSetDelegate = self
         
         tableView.register(
             UINib.init(
                 nibName: Constants.giphyCellNibName,
                 bundle: nil),
             forCellReuseIdentifier: Constants.giphyCellIdentifier)
-        
-        super.init()
         
     }
     
@@ -74,4 +77,28 @@ class GiphyTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
         }
     }
     
+}
+
+extension GiphyTableViewDataSource: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "No Gifs Found"
+        let attrs: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: Fonts.subTitleFont,
+            NSAttributedString.Key.foregroundColor: UIColor.appColor(.body)!]
+        
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "No gifs could be found, try searching again."
+        let attrs: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: Fonts.subHeaderFont,
+            NSAttributedString.Key.foregroundColor: UIColor.appColor(.body)!]
+        
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        return UIImage(named: "image-search-icon")
+    }
 }
