@@ -98,6 +98,7 @@
 		D4BAB87E25B114B400D21593 /* UIView-AddTopBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB87D25B114B400D21593 /* UIView-AddTopBorder.swift */; };
 		D4BAB88725B1B92600D21593 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB88625B1B92600D21593 /* APIResponse.swift */; };
 		D4BAB88F25B1BB0600D21593 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB88E25B1BB0600D21593 /* Result.swift */; };
+		D4BAB89525B1CCCD00D21593 /* DZNEmptyDataSet in Frameworks */ = {isa = PBXBuildFile; productRef = D4BAB89425B1CCCD00D21593 /* DZNEmptyDataSet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BAB89525B1CCCD00D21593 /* DZNEmptyDataSet in Frameworks */,
 				D4BAB87925B101F500D21593 /* SwiftyGif in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -862,6 +864,7 @@
 			name = "CodeLathe-Test";
 			packageProductDependencies = (
 				D4BAB87825B101F500D21593 /* SwiftyGif */,
+				D4BAB89425B1CCCD00D21593 /* DZNEmptyDataSet */,
 			);
 			productName = "CodeLathe-Test";
 			productReference = D44CDE7325AFA89C00880FD0 /* CodeLathe-Test.app */;
@@ -937,6 +940,7 @@
 			mainGroup = D44CDE6A25AFA89C00880FD0;
 			packageReferences = (
 				D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+				D4BAB89325B1CCCD00D21593 /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */,
 			);
 			productRefGroup = D44CDE7425AFA89C00880FD0 /* Products */;
 			projectDirPath = "";
@@ -1430,6 +1434,14 @@
 				minimumVersion = 5.3.0;
 			};
 		};
+		D4BAB89325B1CCCD00D21593 /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dzenbot/DZNEmptyDataSet";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1437,6 +1449,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */;
 			productName = SwiftyGif;
+		};
+		D4BAB89425B1CCCD00D21593 /* DZNEmptyDataSet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4BAB89325B1CCCD00D21593 /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */;
+			productName = DZNEmptyDataSet;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
