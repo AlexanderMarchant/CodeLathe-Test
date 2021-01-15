@@ -12,6 +12,7 @@ class AppCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     let giphyService: GiphyServiceProtocol
+    let urlSessionService: UrlSessionServiceProtocol
     let uiApplicationHelperService: UIApplicationHelperServiceProtocol
     
     // MARK: - Init
@@ -20,6 +21,7 @@ class AppCoordinator: Coordinator {
         
         self.navigationController = navigationController
         self.giphyService = GiphyService()
+        self.urlSessionService = UrlSessionService()
         self.uiApplicationHelperService = UIApplicationHelperService()
         
         self.navigationController.navigationBar.tintColor = UIColor.appColor(.body)
@@ -53,6 +55,7 @@ class AppCoordinator: Coordinator {
         let giphyAPICoordinator = GiphyAPICoordinator(
             self.navigationController,
             self.giphyService,
+            self.urlSessionService,
             self.uiApplicationHelperService)
         
         giphyAPICoordinator.delegate = self

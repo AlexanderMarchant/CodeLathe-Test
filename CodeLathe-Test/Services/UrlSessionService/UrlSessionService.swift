@@ -7,11 +7,9 @@
 
 import Foundation
 
-class UrlSessionService {
+class UrlSessionService: UrlSessionServiceProtocol {
     
-    static let shared = UrlSessionService()
-    
-    private init() {}
+    init() {}
     
     // Given more time, I would add a caching service that is checked before downloading the image from the url
     

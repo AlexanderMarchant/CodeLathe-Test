@@ -75,15 +75,18 @@ protocol VirtualCVCoordinatorDelegate: AnyObject {
 class VirtualCVCoordinator: Coordinator {
     
     let navigationController: UINavigationController
+    let urlSessionService: UrlSessionServiceProtocol
     let uiApplicationHelperService: UIApplicationHelperServiceProtocol
     
     weak var delegate: VirtualCVCoordinatorDelegate?
     
     init(
         _ navigationController: UINavigationController,
+        _ urlSessionService: UrlSessionServiceProtocol,
         _ uiApplicationHelperService: UIApplicationHelperServiceProtocol) {
         
         self.navigationController = navigationController
+        self.urlSessionService = urlSessionService
         self.uiApplicationHelperService = uiApplicationHelperService
         
         self.navigationController.isNavigationBarHidden = false
@@ -98,6 +101,7 @@ class VirtualCVCoordinator: Coordinator {
         
         let virtualCVPresenter = VirtualCVPresenter(
             candidate: candidate,
+            self.urlSessionService,
             with: virtualCVViewController,
             delegate: self)
         
@@ -111,7 +115,8 @@ class VirtualCVCoordinator: Coordinator {
         
         let viewShowcasePresenter = ViewShowcasePresenter(
             showcase: showcase,
-            uiApplicationHelperService,
+            self.urlSessionService,
+            self.uiApplicationHelperService,
             with: viewShowcaseViewController,
             delegate: self)
         

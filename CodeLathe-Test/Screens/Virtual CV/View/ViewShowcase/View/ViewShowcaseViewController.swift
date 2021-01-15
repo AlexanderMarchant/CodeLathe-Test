@@ -37,28 +37,6 @@ extension ViewShowcaseViewController: ViewShowcasePresenterView {
     func didGetShowcase(_ showcase: GalleryShowcase) {
         self.title = showcase.title
         
-        UrlSessionService.shared.downloadImage(from: URL(string: showcase.displayImageUrl)!) { [weak self] (data, response, error) in
-                
-            guard let data = data,
-                  let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                  error == nil else {
-                
-                print("Something went wrong, log the error")
-                print("ERROR: \(error!.localizedDescription)")
-                
-                DispatchQueue.main.async() { [weak self] in
-                    self?.projectLogo.image = UIImage(named: "image-not-found")!
-                }
-                
-                return
-            }
-            
-            DispatchQueue.main.async() { [weak self] in
-                self?.projectLogo.image = UIImage(data: data)
-            }
-            
-        }
-        
         self.descriptionLabel.text = showcase.description
         
         showcase.technologiesUsed.forEach({
@@ -91,6 +69,17 @@ extension ViewShowcaseViewController: ViewShowcasePresenterView {
         } else {
             self.takeALookButton.isEnabled = false
             self.takeALookButton.setTitle(localizedString(forKey: "no_project_link"), for: .normal)
+        }
+    }
+    
+    func didGetImageData(_ imageData: Data?) {
+        
+        DispatchQueue.main.async() {
+            if let data = imageData {
+                self.projectLogo.image = UIImage(data: data)
+            } else {
+                self.projectLogo.image = UIImage(named: "image-not-found")!
+            }
         }
     }
     

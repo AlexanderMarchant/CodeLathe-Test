@@ -13,6 +13,7 @@ extension GalleryCollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         
         let showcase = self.gallery.showcases[indexPath.row]
+        let urlSessionService: UrlSessionServiceProtocol = UrlSessionService()
         let uiApplicationHelperService: UIApplicationHelperServiceProtocol = UIApplicationHelperService()
         var openProjectLinkActionAttributes: UIMenuElement.Attributes = UIMenuElement.Attributes.disabled
         
@@ -20,6 +21,7 @@ extension GalleryCollectionViewDataSource {
         
         let viewShowcasePresenter = ViewShowcasePresenter(
             showcase: showcase,
+            urlSessionService,
             uiApplicationHelperService,
             with: viewShowcaseViewController,
             delegate: self)

@@ -15,6 +15,7 @@ class GiphyAPICoordinator: Coordinator {
     
     let navigationController: UINavigationController
     let giphyService: GiphyServiceProtocol
+    let urlSessionService: UrlSessionServiceProtocol
     let uiApplicationHelperService: UIApplicationHelperServiceProtocol
     
     weak var delegate: GiphyAPICoordinatorDelegate?
@@ -22,10 +23,12 @@ class GiphyAPICoordinator: Coordinator {
     init(
         _ navigationController: UINavigationController,
         _ giphyService: GiphyServiceProtocol,
+        _ urlSessionService: UrlSessionServiceProtocol,
         _ uiApplicationHelperService: UIApplicationHelperServiceProtocol) {
         
         self.navigationController = navigationController
         self.giphyService = giphyService
+        self.urlSessionService = urlSessionService
         self.uiApplicationHelperService = uiApplicationHelperService
         
         self.navigationController.isNavigationBarHidden = false
@@ -56,6 +59,7 @@ extension GiphyAPICoordinator: GiphyAPIPresenterDelegate {
     func showVirtualCv() {
         let virtualCVCoordinator = VirtualCVCoordinator(
             self.navigationController,
+            self.urlSessionService,
             self.uiApplicationHelperService)
             
         virtualCVCoordinator.delegate = self

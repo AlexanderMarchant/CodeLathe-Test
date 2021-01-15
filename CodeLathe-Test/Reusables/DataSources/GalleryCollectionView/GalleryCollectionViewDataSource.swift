@@ -15,15 +15,18 @@ protocol GalleryCollectionViewDataSourceDelegate {
 class GalleryCollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     let gallery: CandidateGallery
+    let urlSessionService: UrlSessionServiceProtocol
     let collectionView: UICollectionView
     let delegate: GalleryCollectionViewDataSourceDelegate
     
     init(
         gallery: CandidateGallery,
+        _ urlSessionService: UrlSessionServiceProtocol,
         collectionView: UICollectionView,
         delegate: GalleryCollectionViewDataSourceDelegate) {
         
         self.gallery = gallery
+        self.urlSessionService = urlSessionService
         self.collectionView = collectionView
         self.delegate = delegate
         
@@ -59,7 +62,7 @@ class GalleryCollectionViewDataSource: NSObject, UICollectionViewDataSource, UIC
         
         let galleryShowcase = gallery.showcases[indexPath.row]
         
-        let galleryCellModel = GalleryCellModel(galleryShowcase)
+        let galleryCellModel = GalleryCellModel(galleryShowcase, self.urlSessionService)
         
         cell.model = galleryCellModel
         

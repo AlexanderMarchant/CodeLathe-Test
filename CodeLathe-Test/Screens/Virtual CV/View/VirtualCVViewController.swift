@@ -48,7 +48,8 @@ class VirtualCVViewController: UIViewController, Storyboarded {
 }
 
 extension VirtualCVViewController: VirtualCVPresenterView {
-    func didGetCandidate(_ candidate: Candidate) {
+    
+    func didGetCandidate(_ candidate: Candidate, _ urlSessionService: UrlSessionServiceProtocol) {
         self.title = String(format: localizedString(forKey: "virtual_cv"), candidate.firstName, candidate.lastName)
         
         cvHeaderView.model = CVHeaderViewModel(
@@ -64,6 +65,7 @@ extension VirtualCVViewController: VirtualCVPresenterView {
         
         galleryCollectionViewDataSource = GalleryCollectionViewDataSource(
             gallery: candidate.gallery,
+            urlSessionService,
             collectionView: galleryCollectionView,
             delegate: self)
         

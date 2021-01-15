@@ -13,29 +13,31 @@ protocol VirtualCVPresenterDelegate {
 }
 
 protocol VirtualCVPresenterView {
-    func didGetCandidate(_ candidate: Candidate)
+    func didGetCandidate(_ candidate: Candidate, _ urlSessionService: UrlSessionServiceProtocol)
 }
 
 class VirtualCVPresenter: VirtualCVPresenterProtocol {
     
     let candidate: Candidate
-    
+    let urlSessionService: UrlSessionServiceProtocol
     let delegate: VirtualCVPresenterDelegate
     let view: VirtualCVPresenterView
     
     init(
         candidate: Candidate,
+        _ urlSessionService: UrlSessionServiceProtocol,
         with view: VirtualCVPresenterView,
         delegate: VirtualCVPresenterDelegate) {
         
         self.candidate = candidate
+        self.urlSessionService = urlSessionService
         self.delegate = delegate
         self.view = view
         
     }
     
     func getCandidate() {
-        self.view.didGetCandidate(candidate)
+        self.view.didGetCandidate(candidate, self.urlSessionService)
     }
     
     func didTapShowcase(showcase: GalleryShowcase) {

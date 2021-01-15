@@ -21,7 +21,7 @@ class GalleryCell: UICollectionViewCell {
             
             setupDropShadow()
             
-            UrlSessionService.shared.downloadImage(from: model.imageUrl!) { [weak self] (data, response, error) in
+            model.urlSessionService.downloadImage(from: model.imageUrl!) { [weak self] (data, response, error) in
                 
                 guard let data = data,
                       let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,

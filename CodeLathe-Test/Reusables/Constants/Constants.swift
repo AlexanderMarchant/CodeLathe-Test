@@ -27,6 +27,9 @@ struct Constants {
     static let giphyCellIdentifier = "GiphyCell"
     static let giphyCellNibName = "GiphyCell"
     
+    // Giphy APIs
+    static let giphyApiTrendingLink = "https://api.giphy.com/v1/gifs/trending"
+    static let giphyApiSearchLink = "https://api.giphy.com/v1/gifs/search"
     
     // Other Links
     static let codalatheWebsiteLink = "https://www.getfilecloud.com"

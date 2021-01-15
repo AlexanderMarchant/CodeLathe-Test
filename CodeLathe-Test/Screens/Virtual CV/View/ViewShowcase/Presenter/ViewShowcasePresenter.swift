@@ -13,12 +13,14 @@ protocol ViewShowcasePresenterDelegate {
 
 protocol ViewShowcasePresenterView {
     func didGetShowcase(_ showcase: GalleryShowcase)
+    func didGetImageData(_ imageData: Data?)
     func errorOccurred(message: String)
 }
 
 class ViewShowcasePresenter: ViewShowcasePresenterProtocol {
     
     let showcase: GalleryShowcase
+    let urlSessionService: UrlSessionServiceProtocol
     let uiApplicationHelperService: UIApplicationHelperServiceProtocol
     
     let delegate: ViewShowcasePresenterDelegate
@@ -26,11 +28,13 @@ class ViewShowcasePresenter: ViewShowcasePresenterProtocol {
     
     init(
         showcase: GalleryShowcase,
+        _ urlSessionService: UrlSessionServiceProtocol,
         _ uiApplicationHelperService: UIApplicationHelperServiceProtocol,
         with view: ViewShowcasePresenterView,
         delegate: ViewShowcasePresenterDelegate) {
         
         self.showcase = showcase
+        self.urlSessionService = urlSessionService
         self.uiApplicationHelperService = uiApplicationHelperService
         self.delegate = delegate
         self.view = view
@@ -39,6 +43,21 @@ class ViewShowcasePresenter: ViewShowcasePresenterProtocol {
     
     func getShowcase() {
         self.view.didGetShowcase(showcase)
+        
+        urlSessionService.downloadImage(from: URL(string: showcase.displayImageUrl)!) { [weak self] (data, response, error) in
+            
+            if let error = error,
+               let httpURLResponse = response as? HTTPURLResponse,
+               httpURLResponse.statusCode != 200 {
+                print("Something went wrong, log the error")
+                print("ERROR: \(error.localizedDescription)")
+                
+                self?.view.errorOccurred(message: localizedString(forKey: "general_error"))
+            }
+            
+            self?.view.didGetImageData(data)
+            
+        }
     }
     
     func openProjectLink() {

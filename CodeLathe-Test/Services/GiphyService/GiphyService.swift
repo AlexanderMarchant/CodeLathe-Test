@@ -38,7 +38,7 @@ class GiphyService: GiphyServiceProtocol {
         ]
         
         self.performRequest(
-            link: "https://api.giphy.com/v1/gifs/trending",
+            link: Constants.giphyApiTrendingLink,
             parameters: parameters) { (result: Result<ApiResponse<GifTrendModel>>) in
             
                 self.currentTrendingOffeset += limit
@@ -69,7 +69,7 @@ class GiphyService: GiphyServiceProtocol {
         ]
         
         self.performRequest(
-            link: "https://api.giphy.com/v1/gifs/search",
+            link: Constants.giphyApiSearchLink,
             parameters: parameters) { (result: Result<ApiResponse<GifSearchModel>>) in
             
                 self.currentSearchOffset += limit
