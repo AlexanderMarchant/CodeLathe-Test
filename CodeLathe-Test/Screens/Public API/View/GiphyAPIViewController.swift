@@ -23,7 +23,7 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var loadingView: LoadingView!
     
-    private var giphyTableViewDataSource: GiphyTableViewDataSource?
+    internal var giphyTableViewDataSource: GiphyTableViewDataSource?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,7 +98,7 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
     }
     
     func setLoading(isLoading: Bool) {
-        DispatchQueue.main.async {
+        guaranteeMainThread {
             self.loadingView.setLoading(isLoading: isLoading)
             self.navigationItem.leftBarButtonItem?.isEnabled = !isLoading
         }
@@ -124,10 +124,10 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
                 self.searchTextFieldContainerView.isHidden = true
-                self.placeholderSearchTextField.text = ""
                 self.view.frame.origin.y -= (keyboardSize.height - searchTextFieldContainerView.frame.height)
             }
             
+            self.placeholderSearchTextField.text = ""
             self.searchTextField.becomeFirstResponder()
         }
     }
@@ -135,15 +135,15 @@ class GiphyAPIViewController: UIViewController, Storyboarded {
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
-            self.placeholderSearchTextField.text = ""
             self.searchTextFieldContainerView.isHidden = false
         }
+        self.placeholderSearchTextField.text = ""
     }
     
     func clearTableView() {
         self.giphyTableViewDataSource?.removeAllGifs()
         
-        DispatchQueue.main.async {
+        guaranteeMainThread {
             self.giphyTableView.reloadData()
             self.dismissKeyboard()
         }
@@ -161,7 +161,7 @@ extension GiphyAPIViewController: GiphyAPIPresenterView {
             
             var currentCount = gifs.count
             
-            DispatchQueue.main.async {
+            guaranteeMainThread {
                 self.giphyTableView.beginUpdates()
                 
                 gifs.forEach({ x in
@@ -189,7 +189,7 @@ extension GiphyAPIViewController: GiphyAPIPresenterView {
             self.giphyTableView.dataSource = self.giphyTableViewDataSource!
             self.giphyTableView.delegate = self.giphyTableViewDataSource!
             
-            DispatchQueue.main.async {
+            guaranteeMainThread {
                 self.giphyTableView.reloadData()
             }
             
