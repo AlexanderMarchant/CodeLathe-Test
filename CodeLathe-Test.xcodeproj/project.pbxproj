@@ -66,6 +66,7 @@
 		D44CE00725B055E300880FD0 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CE00525B055E300880FD0 /* GalleryCell.swift */; };
 		D44CE00825B055E300880FD0 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44CE00625B055E300880FD0 /* GalleryCell.xib */; };
 		D44CE00E25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CE00D25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift */; };
+		D45BECA325B35CD800121C7E /* Mockingbird in Frameworks */ = {isa = PBXBuildFile; productRef = D45BECA225B35CD800121C7E /* Mockingbird */; };
 		D49E29B425B1ED90004CA331 /* UrlSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E29B325B1ED90004CA331 /* UrlSessionService.swift */; };
 		D49E29B925B1EF8B004CA331 /* UrlSessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E29B825B1EF8B004CA331 /* UrlSessionServiceProtocol.swift */; };
 		D4AAB35425B1F59100363DD7 /* ViewShowcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4AAB35625B1F59100363DD7 /* ViewShowcase.storyboard */; };
@@ -241,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45BECA325B35CD800121C7E /* Mockingbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,6 +902,9 @@
 				D44CDE8B25AFA8A400880FD0 /* PBXTargetDependency */,
 			);
 			name = "CodeLathe-TestTests";
+			packageProductDependencies = (
+				D45BECA225B35CD800121C7E /* Mockingbird */,
+			);
 			productName = "CodeLathe-TestTests";
 			productReference = D44CDE8925AFA8A400880FD0 /* CodeLathe-TestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -957,6 +962,7 @@
 			packageReferences = (
 				D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */,
 				D4BAB89325B1CCCD00D21593 /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */,
+				D45BECA125B35CD800121C7E /* XCRemoteSwiftPackageReference "mockingbird" */,
 			);
 			productRefGroup = D44CDE7425AFA89C00880FD0 /* Products */;
 			projectDirPath = "";
@@ -1462,6 +1468,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D45BECA125B35CD800121C7E /* XCRemoteSwiftPackageReference "mockingbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/birdrides/mockingbird";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.16.0;
+			};
+		};
 		D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kirualex/SwiftyGif.git";
@@ -1481,6 +1495,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D45BECA225B35CD800121C7E /* Mockingbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D45BECA125B35CD800121C7E /* XCRemoteSwiftPackageReference "mockingbird" */;
+			productName = Mockingbird;
+		};
 		D4BAB87825B101F500D21593 /* SwiftyGif */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */;
