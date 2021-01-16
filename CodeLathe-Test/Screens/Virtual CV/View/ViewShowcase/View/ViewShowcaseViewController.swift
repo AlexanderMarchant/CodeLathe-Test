@@ -74,7 +74,6 @@ extension ViewShowcaseViewController: ViewShowcasePresenterView {
     
     func didGetImageData(_ imageData: Data?) {
         guaranteeMainThread {
-            
             if let data = imageData {
                 self.projectLogo.image = UIImage(data: data)
             } else {

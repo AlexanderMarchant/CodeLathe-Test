@@ -69,6 +69,7 @@
 		D488B83125B36390009419DA /* ViewShowcaseViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B83025B36390009419DA /* ViewShowcaseViewControllerTests.swift */; };
 		D488B83E25B366C4009419DA /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D488B83D25B366C4009419DA /* TestAssets.xcassets */; };
 		D488B84325B3696E009419DA /* GuaranteeMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B84225B3696E009419DA /* GuaranteeMainThread.swift */; };
+		D488B84825B36CA9009419DA /* ViewShowcasePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B84725B36CA9009419DA /* ViewShowcasePresenterTests.swift */; };
 		D49E29B425B1ED90004CA331 /* UrlSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E29B325B1ED90004CA331 /* UrlSessionService.swift */; };
 		D49E29B925B1EF8B004CA331 /* UrlSessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E29B825B1EF8B004CA331 /* UrlSessionServiceProtocol.swift */; };
 		D4AAB35425B1F59100363DD7 /* ViewShowcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4AAB35625B1F59100363DD7 /* ViewShowcase.storyboard */; };
@@ -193,6 +194,7 @@
 		D488B83025B36390009419DA /* ViewShowcaseViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShowcaseViewControllerTests.swift; sourceTree = "<group>"; };
 		D488B83D25B366C4009419DA /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 		D488B84225B3696E009419DA /* GuaranteeMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuaranteeMainThread.swift; sourceTree = "<group>"; };
+		D488B84725B36CA9009419DA /* ViewShowcasePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShowcasePresenterTests.swift; sourceTree = "<group>"; };
 		D49E29B325B1ED90004CA331 /* UrlSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionService.swift; sourceTree = "<group>"; };
 		D49E29B825B1EF8B004CA331 /* UrlSessionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionServiceProtocol.swift; sourceTree = "<group>"; };
 		D4AAB35025B1F4E300363DD7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/VirtualCV.strings; sourceTree = "<group>"; };
@@ -754,6 +756,7 @@
 		D488B82925B36358009419DA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D488B84725B36CA9009419DA /* ViewShowcasePresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1237,6 +1240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D488B83125B36390009419DA /* ViewShowcaseViewControllerTests.swift in Sources */,
+				D488B84825B36CA9009419DA /* ViewShowcasePresenterTests.swift in Sources */,
 				EC0EA7C945F554B2E70D096B /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

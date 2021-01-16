@@ -60,6 +60,108 @@ class ViewShowcaseViewControllerTests: XCTestCase {
         verify(mockViewShowcasePresenter.openProjectLink()).wasCalled(1)
     }
     
+    func testViewShowcasePresenterView_DidGetShowcase_ProjectLinkIsNil() {
+        // Arrange
+        let DISPLAY_IMAGE_URL = "https://ptfinder.app/testing"
+        let TITLE = "Test"
+        let DESCRIPTION = "Testing"
+        let PROJECT_LINK: String? = nil
+        
+        let TECHNOLOGIES_USED = ["Tech 1", "Tech 2", "Tech 3"]
+        let CHALLENGES = ["Test 1", "Test 2", "Test 3"]
+        
+        let EXPECTED_TECHNOLOGIES_USED_STRING = "Tech 1, Tech 2, Tech 3"
+        let EXPECTED_CHALLENGES_STRING = "Test 1\n\n\nTest 2\n\n\nTest 3"
+        
+        let SHOWCASE = GalleryShowcase(
+            displayImageUrl: DISPLAY_IMAGE_URL,
+            title: TITLE,
+            description: DESCRIPTION,
+            projectLink: PROJECT_LINK,
+            technologiesUsed: TECHNOLOGIES_USED,
+            challenges: CHALLENGES)
+        
+        // Act
+        viewShowcaseViewController.didGetShowcase(SHOWCASE)
+        
+        // Assert
+        XCTAssertEqual(TITLE, viewShowcaseViewController.title)
+        XCTAssertEqual(DESCRIPTION, viewShowcaseViewController.descriptionLabel.text)
+        XCTAssertEqual(EXPECTED_TECHNOLOGIES_USED_STRING, viewShowcaseViewController.technologiesUsedLabel.text)
+        XCTAssertEqual(EXPECTED_CHALLENGES_STRING, viewShowcaseViewController.challengesLabel.text)
+        
+        XCTAssertEqual(localizedString(forKey: "no_project_link"), viewShowcaseViewController.takeALookButton.currentTitle)
+        XCTAssertFalse(viewShowcaseViewController.takeALookButton.isEnabled)
+    }
+    
+    func testViewShowcasePresenterView_DidGetShowcase_TechnologiesUsedIsEmpty() {
+        // Arrange
+        let DISPLAY_IMAGE_URL = "https://ptfinder.app/testing"
+        let TITLE = "Test"
+        let DESCRIPTION = "Testing"
+        let PROJECT_LINK: String? = "https://ptfinder.app"
+        
+        let TECHNOLOGIES_USED = [String]()
+        let CHALLENGES = ["Test 1", "Test 2", "Test 3"]
+        
+        let EXPECTED_TECHNOLOGIES_USED_STRING = ""
+        let EXPECTED_CHALLENGES_STRING = "Test 1\n\n\nTest 2\n\n\nTest 3"
+        
+        let SHOWCASE = GalleryShowcase(
+            displayImageUrl: DISPLAY_IMAGE_URL,
+            title: TITLE,
+            description: DESCRIPTION,
+            projectLink: PROJECT_LINK,
+            technologiesUsed: TECHNOLOGIES_USED,
+            challenges: CHALLENGES)
+        
+        // Act
+        viewShowcaseViewController.didGetShowcase(SHOWCASE)
+        
+        // Assert
+        XCTAssertEqual(TITLE, viewShowcaseViewController.title)
+        XCTAssertEqual(DESCRIPTION, viewShowcaseViewController.descriptionLabel.text)
+        XCTAssertEqual(EXPECTED_TECHNOLOGIES_USED_STRING, viewShowcaseViewController.technologiesUsedLabel.text)
+        XCTAssertEqual(EXPECTED_CHALLENGES_STRING, viewShowcaseViewController.challengesLabel.text)
+        
+        XCTAssertEqual(localizedString(forKey: "take_a_look"), viewShowcaseViewController.takeALookButton.currentTitle)
+        XCTAssertTrue(viewShowcaseViewController.takeALookButton.isEnabled)
+    }
+    
+    func testViewShowcasePresenterView_DidGetShowcase_ChallengesIsEmpty() {
+        // Arrange
+        let DISPLAY_IMAGE_URL = "https://ptfinder.app/testing"
+        let TITLE = "Test"
+        let DESCRIPTION = "Testing"
+        let PROJECT_LINK: String? = "https://ptfinder.app"
+        
+        let TECHNOLOGIES_USED = ["Tech 1", "Tech 2", "Tech 3"]
+        let CHALLENGES = [String]()
+        
+        let EXPECTED_TECHNOLOGIES_USED_STRING = "Tech 1, Tech 2, Tech 3"
+        let EXPECTED_CHALLENGES_STRING = ""
+        
+        let SHOWCASE = GalleryShowcase(
+            displayImageUrl: DISPLAY_IMAGE_URL,
+            title: TITLE,
+            description: DESCRIPTION,
+            projectLink: PROJECT_LINK,
+            technologiesUsed: TECHNOLOGIES_USED,
+            challenges: CHALLENGES)
+        
+        // Act
+        viewShowcaseViewController.didGetShowcase(SHOWCASE)
+        
+        // Assert
+        XCTAssertEqual(TITLE, viewShowcaseViewController.title)
+        XCTAssertEqual(DESCRIPTION, viewShowcaseViewController.descriptionLabel.text)
+        XCTAssertEqual(EXPECTED_TECHNOLOGIES_USED_STRING, viewShowcaseViewController.technologiesUsedLabel.text)
+        XCTAssertEqual(EXPECTED_CHALLENGES_STRING, viewShowcaseViewController.challengesLabel.text)
+        
+        XCTAssertEqual(localizedString(forKey: "take_a_look"), viewShowcaseViewController.takeALookButton.currentTitle)
+        XCTAssertTrue(viewShowcaseViewController.takeALookButton.isEnabled)
+    }
+    
     func testViewShowcasePresenterView_DidGetImageData_DataIsNil() {
         // Arrange
         let DATA: Data? = nil
@@ -71,7 +173,19 @@ class ViewShowcaseViewControllerTests: XCTestCase {
             
         // Assert
         XCTAssertEqual(NOT_FOUND_IMAGE, viewShowcaseViewController.projectLogo.image)
+    }
+    
+    func testViewShowcasePresenterView_DidGetImageData_DataIsNotNil() {
+        // Arrange
+        let IMAGE = UIImage(named: "codelathe-logo", in: Bundle(identifier: "CodeLathe-Test"), compatibleWith: nil)!
         
+        let DATA = IMAGE.imageData
+        
+        // Act
+        viewShowcaseViewController.didGetImageData(DATA)
+            
+        // Assert
+        XCTAssertNotNil(viewShowcaseViewController.projectLogo.image)
     }
 
 }
