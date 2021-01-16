@@ -73,6 +73,7 @@
 		D488B84D25B3730A009419DA /* VirtualCVViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B84C25B3730A009419DA /* VirtualCVViewControllerTests.swift */; };
 		D488B85525B377AD009419DA /* VirtualCVPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B85425B377AD009419DA /* VirtualCVPresenterTests.swift */; };
 		D488B86025B386C0009419DA /* GiphyAPIViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B85F25B386C0009419DA /* GiphyAPIViewControllerTests.swift */; };
+		D488B86525B39203009419DA /* GiphyAPIPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B86425B39203009419DA /* GiphyAPIPresenterTests.swift */; };
 		D49E29B425B1ED90004CA331 /* UrlSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E29B325B1ED90004CA331 /* UrlSessionService.swift */; };
 		D49E29B925B1EF8B004CA331 /* UrlSessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E29B825B1EF8B004CA331 /* UrlSessionServiceProtocol.swift */; };
 		D4AAB35425B1F59100363DD7 /* ViewShowcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4AAB35625B1F59100363DD7 /* ViewShowcase.storyboard */; };
@@ -201,6 +202,7 @@
 		D488B84C25B3730A009419DA /* VirtualCVViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualCVViewControllerTests.swift; sourceTree = "<group>"; };
 		D488B85425B377AD009419DA /* VirtualCVPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualCVPresenterTests.swift; sourceTree = "<group>"; };
 		D488B85F25B386C0009419DA /* GiphyAPIViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyAPIViewControllerTests.swift; sourceTree = "<group>"; };
+		D488B86425B39203009419DA /* GiphyAPIPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyAPIPresenterTests.swift; sourceTree = "<group>"; };
 		D49E29B325B1ED90004CA331 /* UrlSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionService.swift; sourceTree = "<group>"; };
 		D49E29B825B1EF8B004CA331 /* UrlSessionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionServiceProtocol.swift; sourceTree = "<group>"; };
 		D4AAB35025B1F4E300363DD7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/VirtualCV.strings; sourceTree = "<group>"; };
@@ -787,6 +789,7 @@
 		D488B82C25B3636B009419DA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D488B86425B39203009419DA /* GiphyAPIPresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1253,6 +1256,7 @@
 				D488B84825B36CA9009419DA /* ViewShowcasePresenterTests.swift in Sources */,
 				EC0EA7C945F554B2E70D096B /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift in Sources */,
 				D488B84D25B3730A009419DA /* VirtualCVViewControllerTests.swift in Sources */,
+				D488B86525B39203009419DA /* GiphyAPIPresenterTests.swift in Sources */,
 				D488B86025B386C0009419DA /* GiphyAPIViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

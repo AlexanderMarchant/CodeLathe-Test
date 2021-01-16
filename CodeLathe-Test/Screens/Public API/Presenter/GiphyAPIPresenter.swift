@@ -22,8 +22,8 @@ class GiphyAPIPresenter: GiphyAPIPresenterProtocol {
     let delegate: GiphyAPIPresenterDelegate
     let view: GiphyAPIPresenterView
     
-    private var currentSearch: GiphySearch?
-    private var currentSearchTerm: String?
+    private (set) var currentSearch: GiphySearch?
+    private (set) var currentSearchTerm: String?
     
     init(
         _ giphyService: GiphyServiceProtocol,
