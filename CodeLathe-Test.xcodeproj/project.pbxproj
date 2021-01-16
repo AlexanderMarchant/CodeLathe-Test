@@ -12,7 +12,6 @@
 		D44CDE7E25AFA89C00880FD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44CDE7C25AFA89C00880FD0 /* Main.storyboard */; };
 		D44CDE8025AFA8A300880FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D44CDE7F25AFA8A300880FD0 /* Assets.xcassets */; };
 		D44CDE8325AFA8A300880FD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44CDE8125AFA8A300880FD0 /* LaunchScreen.storyboard */; };
-		D44CDE8E25AFA8A400880FD0 /* CodeLathe_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CDE8D25AFA8A400880FD0 /* CodeLathe_TestTests.swift */; };
 		D44CDE9925AFA8A400880FD0 /* CodeLathe_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CDE9825AFA8A400880FD0 /* CodeLathe_TestUITests.swift */; };
 		D44CDEB525AFA9AA00880FD0 /* Default.strings in Resources */ = {isa = PBXBuildFile; fileRef = D44CDEB425AFA9AA00880FD0 /* Default.strings */; };
 		D44CDEC625AFAA6500880FD0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D44CDEC825AFAA6500880FD0 /* Localizable.strings */; };
@@ -66,6 +65,13 @@
 		D44CE00725B055E300880FD0 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CE00525B055E300880FD0 /* GalleryCell.swift */; };
 		D44CE00825B055E300880FD0 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D44CE00625B055E300880FD0 /* GalleryCell.xib */; };
 		D44CE00E25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CE00D25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift */; };
+		D45BECA325B35CD800121C7E /* Mockingbird in Frameworks */ = {isa = PBXBuildFile; productRef = D45BECA225B35CD800121C7E /* Mockingbird */; };
+		D488B83125B36390009419DA /* ViewShowcaseViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B83025B36390009419DA /* ViewShowcaseViewControllerTests.swift */; };
+		D488B83E25B366C4009419DA /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D488B83D25B366C4009419DA /* TestAssets.xcassets */; };
+		D488B84325B3696E009419DA /* GuaranteeMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B84225B3696E009419DA /* GuaranteeMainThread.swift */; };
+		D488B84825B36CA9009419DA /* ViewShowcasePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B84725B36CA9009419DA /* ViewShowcasePresenterTests.swift */; };
+		D488B84D25B3730A009419DA /* VirtualCVViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B84C25B3730A009419DA /* VirtualCVViewControllerTests.swift */; };
+		D488B85525B377AD009419DA /* VirtualCVPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488B85425B377AD009419DA /* VirtualCVPresenterTests.swift */; };
 		D49E29B425B1ED90004CA331 /* UrlSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E29B325B1ED90004CA331 /* UrlSessionService.swift */; };
 		D49E29B925B1EF8B004CA331 /* UrlSessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E29B825B1EF8B004CA331 /* UrlSessionServiceProtocol.swift */; };
 		D4AAB35425B1F59100363DD7 /* ViewShowcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4AAB35625B1F59100363DD7 /* ViewShowcase.storyboard */; };
@@ -101,6 +107,7 @@
 		D4BAB88725B1B92600D21593 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB88625B1B92600D21593 /* APIResponse.swift */; };
 		D4BAB88F25B1BB0600D21593 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB88E25B1BB0600D21593 /* Result.swift */; };
 		D4BAB89525B1CCCD00D21593 /* DZNEmptyDataSet in Frameworks */ = {isa = PBXBuildFile; productRef = D4BAB89425B1CCCD00D21593 /* DZNEmptyDataSet */; };
+		EC0EA7C945F554B2E70D096B /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8923FB0F97316C29C88C7B7 /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +128,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8923FB0F97316C29C88C7B7 /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift"; path = "MockingbirdMocks/CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift"; sourceTree = "<group>"; };
 		D44CDE7325AFA89C00880FD0 /* CodeLathe-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeLathe-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44CDE7625AFA89C00880FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D44CDE7825AFA89C00880FD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +137,6 @@
 		D44CDE8225AFA8A300880FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D44CDE8425AFA8A300880FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D44CDE8925AFA8A400880FD0 /* CodeLathe-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodeLathe-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D44CDE8D25AFA8A400880FD0 /* CodeLathe_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLathe_TestTests.swift; sourceTree = "<group>"; };
 		D44CDE8F25AFA8A400880FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D44CDE9425AFA8A400880FD0 /* CodeLathe-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodeLathe-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44CDE9825AFA8A400880FD0 /* CodeLathe_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLathe_TestUITests.swift; sourceTree = "<group>"; };
@@ -186,6 +193,12 @@
 		D44CE00525B055E300880FD0 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		D44CE00625B055E300880FD0 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
 		D44CE00D25B0575E00880FD0 /* GalleryCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		D488B83025B36390009419DA /* ViewShowcaseViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShowcaseViewControllerTests.swift; sourceTree = "<group>"; };
+		D488B83D25B366C4009419DA /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
+		D488B84225B3696E009419DA /* GuaranteeMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuaranteeMainThread.swift; sourceTree = "<group>"; };
+		D488B84725B36CA9009419DA /* ViewShowcasePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShowcasePresenterTests.swift; sourceTree = "<group>"; };
+		D488B84C25B3730A009419DA /* VirtualCVViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualCVViewControllerTests.swift; sourceTree = "<group>"; };
+		D488B85425B377AD009419DA /* VirtualCVPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualCVPresenterTests.swift; sourceTree = "<group>"; };
 		D49E29B325B1ED90004CA331 /* UrlSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionService.swift; sourceTree = "<group>"; };
 		D49E29B825B1EF8B004CA331 /* UrlSessionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionServiceProtocol.swift; sourceTree = "<group>"; };
 		D4AAB35025B1F4E300363DD7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/VirtualCV.strings; sourceTree = "<group>"; };
@@ -241,6 +254,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45BECA325B35CD800121C7E /* Mockingbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +268,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD4024093509AD22ADBDA5FF /* Generated Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A8923FB0F97316C29C88C7B7 /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift */,
+			);
+			name = "Generated Mocks";
+			sourceTree = "<group>";
+		};
 		D44CDE6A25AFA89C00880FD0 = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +283,7 @@
 				D44CDE8C25AFA8A400880FD0 /* CodeLathe-TestTests */,
 				D44CDE9725AFA8A400880FD0 /* CodeLathe-TestUITests */,
 				D44CDE7425AFA89C00880FD0 /* Products */,
+				BD4024093509AD22ADBDA5FF /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,8 +318,9 @@
 		D44CDE8C25AFA8A400880FD0 /* CodeLathe-TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				D44CDE8D25AFA8A400880FD0 /* CodeLathe_TestTests.swift */,
+				D488B82325B36333009419DA /* Screens */,
 				D44CDE8F25AFA8A400880FD0 /* Info.plist */,
+				D488B83D25B366C4009419DA /* TestAssets.xcassets */,
 			);
 			path = "CodeLathe-TestTests";
 			sourceTree = "<group>";
@@ -347,6 +371,7 @@
 				D4BAB7D525B05E0D00D21593 /* UIColor */,
 				D4BAB7D425B05E0400D21593 /* UIViewController */,
 				D44CDECE25AFAAA300880FD0 /* LocalizedString.swift */,
+				D488B84225B3696E009419DA /* GuaranteeMainThread.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -680,6 +705,89 @@
 			path = Candidate;
 			sourceTree = "<group>";
 		};
+		D488B82325B36333009419DA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D488B82425B36338009419DA /* Public API */,
+				D488B82525B3633D009419DA /* Virtual CV */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D488B82425B36338009419DA /* Public API */ = {
+			isa = PBXGroup;
+			children = (
+				D488B82C25B3636B009419DA /* Presenter */,
+				D488B82B25B36367009419DA /* View */,
+			);
+			path = "Public API";
+			sourceTree = "<group>";
+		};
+		D488B82525B3633D009419DA /* Virtual CV */ = {
+			isa = PBXGroup;
+			children = (
+				D488B82A25B3635D009419DA /* Presenter */,
+				D488B82625B3634A009419DA /* View */,
+			);
+			path = "Virtual CV";
+			sourceTree = "<group>";
+		};
+		D488B82625B3634A009419DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D488B84C25B3730A009419DA /* VirtualCVViewControllerTests.swift */,
+				D488B82725B3634F009419DA /* ViewShowcase */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D488B82725B3634F009419DA /* ViewShowcase */ = {
+			isa = PBXGroup;
+			children = (
+				D488B82925B36358009419DA /* Presenter */,
+				D488B82825B36355009419DA /* View */,
+			);
+			path = ViewShowcase;
+			sourceTree = "<group>";
+		};
+		D488B82825B36355009419DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D488B83025B36390009419DA /* ViewShowcaseViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D488B82925B36358009419DA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D488B84725B36CA9009419DA /* ViewShowcasePresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D488B82A25B3635D009419DA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D488B85425B377AD009419DA /* VirtualCVPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D488B82B25B36367009419DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D488B82C25B3636B009419DA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		D49E29B225B1ED7D004CA331 /* UrlSessionService */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,6 +998,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D44CDEA025AFA8A400880FD0 /* Build configuration list for PBXNativeTarget "CodeLathe-TestTests" */;
 			buildPhases = (
+				8071149DC95DDC2D9E6D8CCC /* Clean Mockingbird Mocks */,
+				A148810280871E0BA2608723 /* Generate Mockingbird Mocks */,
 				D44CDE8525AFA8A400880FD0 /* Sources */,
 				D44CDE8625AFA8A400880FD0 /* Frameworks */,
 				D44CDE8725AFA8A400880FD0 /* Resources */,
@@ -900,6 +1010,9 @@
 				D44CDE8B25AFA8A400880FD0 /* PBXTargetDependency */,
 			);
 			name = "CodeLathe-TestTests";
+			packageProductDependencies = (
+				D45BECA225B35CD800121C7E /* Mockingbird */,
+			);
 			productName = "CodeLathe-TestTests";
 			productReference = D44CDE8925AFA8A400880FD0 /* CodeLathe-TestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -957,6 +1070,7 @@
 			packageReferences = (
 				D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */,
 				D4BAB89325B1CCCD00D21593 /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */,
+				D45BECA125B35CD800121C7E /* XCRemoteSwiftPackageReference "mockingbird" */,
 			);
 			productRefGroup = D44CDE7425AFA89C00880FD0 /* Products */;
 			projectDirPath = "";
@@ -1008,6 +1122,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D488B83E25B366C4009419DA /* TestAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,6 +1134,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8071149DC95DDC2D9E6D8CCC /* Clean Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Clean Mockingbird Mocks";
+			outputPaths = (
+				"/tmp/Mockingbird-B48B9DD3-C81A-489F-92FB-AC580E68A350",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $RANDOM > '/tmp/Mockingbird-B48B9DD3-C81A-489F-92FB-AC580E68A350'\n";
+		};
+		A148810280871E0BA2608723 /* Generate Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"/tmp/Mockingbird-B48B9DD3-C81A-489F-92FB-AC580E68A350",
+			);
+			name = "Generate Mockingbird Mocks";
+			outputPaths = (
+				"$(SRCROOT)/MockingbirdMocks/CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmockingbird generate \\\n  --targets 'CodeLathe-Test' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-B48B9DD3-C81A-489F-92FB-AC580E68A350'\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D44CDE6F25AFA89C00880FD0 /* Sources */ = {
@@ -1070,6 +1219,7 @@
 				D44CDF5125AFB50100880FD0 /* CLHeader.swift in Sources */,
 				D44CDF2925AFB2C800880FD0 /* AppCoordinator.swift in Sources */,
 				D44CDF8125AFB83D00880FD0 /* VirtualCVViewController.swift in Sources */,
+				D488B84325B3696E009419DA /* GuaranteeMainThread.swift in Sources */,
 				D44CDE7925AFA89C00880FD0 /* SceneDelegate.swift in Sources */,
 				D4BAB82725B0BD5600D21593 /* UIArray-MenuIdentifiable.swift in Sources */,
 				D44CE00725B055E300880FD0 /* GalleryCell.swift in Sources */,
@@ -1095,7 +1245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44CDE8E25AFA8A400880FD0 /* CodeLathe_TestTests.swift in Sources */,
+				D488B85525B377AD009419DA /* VirtualCVPresenterTests.swift in Sources */,
+				D488B83125B36390009419DA /* ViewShowcaseViewControllerTests.swift in Sources */,
+				D488B84825B36CA9009419DA /* ViewShowcasePresenterTests.swift in Sources */,
+				EC0EA7C945F554B2E70D096B /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift in Sources */,
+				D488B84D25B3730A009419DA /* VirtualCVViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1462,6 +1616,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D45BECA125B35CD800121C7E /* XCRemoteSwiftPackageReference "mockingbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/birdrides/mockingbird";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.16.0;
+			};
+		};
 		D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kirualex/SwiftyGif.git";
@@ -1481,6 +1643,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D45BECA225B35CD800121C7E /* Mockingbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D45BECA125B35CD800121C7E /* XCRemoteSwiftPackageReference "mockingbird" */;
+			productName = Mockingbird;
+		};
 		D4BAB87825B101F500D21593 /* SwiftyGif */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4BAB87725B101F400D21593 /* XCRemoteSwiftPackageReference "SwiftyGif" */;

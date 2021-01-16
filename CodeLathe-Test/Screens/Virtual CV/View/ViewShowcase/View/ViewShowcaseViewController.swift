@@ -73,14 +73,14 @@ extension ViewShowcaseViewController: ViewShowcasePresenterView {
     }
     
     func didGetImageData(_ imageData: Data?) {
-        
-        DispatchQueue.main.async() {
+        guaranteeMainThread {
             if let data = imageData {
                 self.projectLogo.image = UIImage(data: data)
             } else {
                 self.projectLogo.image = UIImage(named: "image-not-found")!
             }
         }
+        
     }
     
     func errorOccurred(message: String) {

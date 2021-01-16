@@ -46,11 +46,10 @@ class ViewShowcasePresenter: ViewShowcasePresenterProtocol {
         
         urlSessionService.downloadImage(from: URL(string: showcase.displayImageUrl)!) { [weak self] (data, response, error) in
             
-            if let error = error,
-               let httpURLResponse = response as? HTTPURLResponse,
-               httpURLResponse.statusCode != 200 {
+            if (error != nil || response == nil || (response as? HTTPURLResponse)!.statusCode != 200) {
+                
                 print("Something went wrong, log the error")
-                print("ERROR: \(error.localizedDescription)")
+                print("ERROR: \(error?.localizedDescription ?? "Unknown")")
                 
                 self?.view.errorOccurred(message: localizedString(forKey: "general_error"))
             }
