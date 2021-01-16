@@ -102,6 +102,7 @@
 		D4BAB88725B1B92600D21593 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB88625B1B92600D21593 /* APIResponse.swift */; };
 		D4BAB88F25B1BB0600D21593 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB88E25B1BB0600D21593 /* Result.swift */; };
 		D4BAB89525B1CCCD00D21593 /* DZNEmptyDataSet in Frameworks */ = {isa = PBXBuildFile; productRef = D4BAB89425B1CCCD00D21593 /* DZNEmptyDataSet */; };
+		EC0EA7C945F554B2E70D096B /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8923FB0F97316C29C88C7B7 /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8923FB0F97316C29C88C7B7 /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift"; path = "MockingbirdMocks/CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift"; sourceTree = "<group>"; };
 		D44CDE7325AFA89C00880FD0 /* CodeLathe-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeLathe-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44CDE7625AFA89C00880FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D44CDE7825AFA89C00880FD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD4024093509AD22ADBDA5FF /* Generated Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A8923FB0F97316C29C88C7B7 /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift */,
+			);
+			name = "Generated Mocks";
+			sourceTree = "<group>";
+		};
 		D44CDE6A25AFA89C00880FD0 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +273,7 @@
 				D44CDE8C25AFA8A400880FD0 /* CodeLathe-TestTests */,
 				D44CDE9725AFA8A400880FD0 /* CodeLathe-TestUITests */,
 				D44CDE7425AFA89C00880FD0 /* Products */,
+				BD4024093509AD22ADBDA5FF /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -892,6 +903,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D44CDEA025AFA8A400880FD0 /* Build configuration list for PBXNativeTarget "CodeLathe-TestTests" */;
 			buildPhases = (
+				8071149DC95DDC2D9E6D8CCC /* Clean Mockingbird Mocks */,
+				A148810280871E0BA2608723 /* Generate Mockingbird Mocks */,
 				D44CDE8525AFA8A400880FD0 /* Sources */,
 				D44CDE8625AFA8A400880FD0 /* Frameworks */,
 				D44CDE8725AFA8A400880FD0 /* Resources */,
@@ -1026,6 +1039,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8071149DC95DDC2D9E6D8CCC /* Clean Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Clean Mockingbird Mocks";
+			outputPaths = (
+				"/tmp/Mockingbird-B48B9DD3-C81A-489F-92FB-AC580E68A350",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $RANDOM > '/tmp/Mockingbird-B48B9DD3-C81A-489F-92FB-AC580E68A350'\n";
+		};
+		A148810280871E0BA2608723 /* Generate Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"/tmp/Mockingbird-B48B9DD3-C81A-489F-92FB-AC580E68A350",
+			);
+			name = "Generate Mockingbird Mocks";
+			outputPaths = (
+				"$(SRCROOT)/MockingbirdMocks/CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmockingbird generate \\\n  --targets 'CodeLathe-Test' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift\" \\\n  --support \"${SRCROOT}/MockingbirdSupport\"\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-B48B9DD3-C81A-489F-92FB-AC580E68A350'\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D44CDE6F25AFA89C00880FD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1102,6 +1149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D44CDE8E25AFA8A400880FD0 /* CodeLathe_TestTests.swift in Sources */,
+				EC0EA7C945F554B2E70D096B /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
