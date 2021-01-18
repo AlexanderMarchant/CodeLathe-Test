@@ -16,7 +16,7 @@ In addition, a message is shown if no gifs are found and the table view is empty
 
 #### Virtual CV
 
-I have matched the design specified exactly on the Virtual CV screen. ( https://www.figma.com/file/HBk47Lh9jTB25NPNOYSdoQ/CodeLathe-Technical-Test )
+I have matched the design specified exactly on the Virtual CV screen. (https://www.figma.com/file/HBk47Lh9jTB25NPNOYSdoQ/CodeLathe-Technical-Test)
 
 
 ## The Extras
