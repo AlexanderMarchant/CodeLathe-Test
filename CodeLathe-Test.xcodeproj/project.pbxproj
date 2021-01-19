@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D438A84525B7307E001483F6 /* UIApplicationHelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438A84425B7307E001483F6 /* UIApplicationHelperService.swift */; };
+		D438A85025B7309E001483F6 /* UIApplicationHelperServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D438A84F25B7309E001483F6 /* UIApplicationHelperServiceProtocol.swift */; };
 		D44CDE7725AFA89C00880FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CDE7625AFA89C00880FD0 /* AppDelegate.swift */; };
 		D44CDE7925AFA89C00880FD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CDE7825AFA89C00880FD0 /* SceneDelegate.swift */; };
 		D44CDE7E25AFA89C00880FD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44CDE7C25AFA89C00880FD0 /* Main.storyboard */; };
@@ -91,8 +93,6 @@
 		D4BAB80025B0893A00D21593 /* ViewShowcaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB7FF25B0893A00D21593 /* ViewShowcaseViewController.swift */; };
 		D4BAB80525B0895200D21593 /* ViewShowcasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB80425B0895200D21593 /* ViewShowcasePresenter.swift */; };
 		D4BAB80A25B0895B00D21593 /* ViewShowcasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB80925B0895B00D21593 /* ViewShowcasePresenterProtocol.swift */; };
-		D4BAB81325B0913700D21593 /* UIApplicationHelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB81225B0913700D21593 /* UIApplicationHelperService.swift */; };
-		D4BAB81825B0915400D21593 /* UIApplicationHelperServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB81725B0915400D21593 /* UIApplicationHelperServiceProtocol.swift */; };
 		D4BAB81E25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB81D25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift */; };
 		D4BAB82725B0BD5600D21593 /* UIArray-MenuIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB82625B0BD5600D21593 /* UIArray-MenuIdentifiable.swift */; };
 		D4BAB83025B0C6AE00D21593 /* GiphyServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BAB82F25B0C6AE00D21593 /* GiphyServiceProtocol.swift */; };
@@ -131,6 +131,8 @@
 
 /* Begin PBXFileReference section */
 		A8923FB0F97316C29C88C7B7 /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift"; path = "MockingbirdMocks/CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift"; sourceTree = "<group>"; };
+		D438A84425B7307E001483F6 /* UIApplicationHelperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationHelperService.swift; sourceTree = "<group>"; };
+		D438A84F25B7309E001483F6 /* UIApplicationHelperServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationHelperServiceProtocol.swift; sourceTree = "<group>"; };
 		D44CDE7325AFA89C00880FD0 /* CodeLathe-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeLathe-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44CDE7625AFA89C00880FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D44CDE7825AFA89C00880FD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,8 +228,6 @@
 		D4BAB7FF25B0893A00D21593 /* ViewShowcaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShowcaseViewController.swift; sourceTree = "<group>"; };
 		D4BAB80425B0895200D21593 /* ViewShowcasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShowcasePresenter.swift; sourceTree = "<group>"; };
 		D4BAB80925B0895B00D21593 /* ViewShowcasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShowcasePresenterProtocol.swift; sourceTree = "<group>"; };
-		D4BAB81225B0913700D21593 /* UIApplicationHelperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIApplicationHelperService.swift; path = ../../../../../../../UIApplicationHelperService.swift; sourceTree = "<group>"; };
-		D4BAB81725B0915400D21593 /* UIApplicationHelperServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIApplicationHelperServiceProtocol.swift; path = ../../../../../../../UIApplicationHelperServiceProtocol.swift; sourceTree = "<group>"; };
 		D4BAB81D25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryCollectionViewDataSource-ContextMenu.swift"; sourceTree = "<group>"; };
 		D4BAB82625B0BD5600D21593 /* UIArray-MenuIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIArray-MenuIdentifiable.swift"; sourceTree = "<group>"; };
 		D4BAB82F25B0C6AE00D21593 /* GiphyServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyServiceProtocol.swift; sourceTree = "<group>"; };
@@ -278,6 +278,15 @@
 				A8923FB0F97316C29C88C7B7 /* CodeLathe_TestTests-CodeLathe_TestMocks.generated.swift */,
 			);
 			name = "Generated Mocks";
+			sourceTree = "<group>";
+		};
+		D438A84325B73056001483F6 /* UIApplicationHelperService */ = {
+			isa = PBXGroup;
+			children = (
+				D438A84425B7307E001483F6 /* UIApplicationHelperService.swift */,
+				D438A84F25B7309E001483F6 /* UIApplicationHelperServiceProtocol.swift */,
+			);
+			path = UIApplicationHelperService;
 			sourceTree = "<group>";
 		};
 		D44CDE6A25AFA89C00880FD0 = {
@@ -427,10 +436,10 @@
 		D44CDF1225AFB05800880FD0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D438A84325B73056001483F6 /* UIApplicationHelperService */,
 				D49E29B225B1ED7D004CA331 /* UrlSessionService */,
 				D4BAB88525B1B91300D21593 /* API */,
 				D4BAB82E25B0C69B00D21593 /* GiphyService */,
-				D4BAB81125B0912300D21593 /* UIApplicationHelperService */,
 				D4BAB7EE25B0762200D21593 /* AlertHandlerService */,
 				D4BAB7E825B075E800D21593 /* ContactCandidateService */,
 			);
@@ -881,15 +890,6 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		D4BAB81125B0912300D21593 /* UIApplicationHelperService */ = {
-			isa = PBXGroup;
-			children = (
-				D4BAB81225B0913700D21593 /* UIApplicationHelperService.swift */,
-				D4BAB81725B0915400D21593 /* UIApplicationHelperServiceProtocol.swift */,
-			);
-			path = UIApplicationHelperService;
-			sourceTree = "<group>";
-		};
 		D4BAB81C25B0BCC000D21593 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1204,6 +1204,7 @@
 				D44CDFD225AFC0EF00880FD0 /* SkillsCollectionViewDataSource.swift in Sources */,
 				D44CDF6025AFB55300880FD0 /* CLCaption.swift in Sources */,
 				D44CDF0E25AFACEC00880FD0 /* UIColor-AppColors.swift in Sources */,
+				D438A85025B7309E001483F6 /* UIApplicationHelperServiceProtocol.swift in Sources */,
 				D44CDF8E25AFB85C00880FD0 /* VirtualCVPresenter.swift in Sources */,
 				D44CDECF25AFAAA300880FD0 /* LocalizedString.swift in Sources */,
 				D44CDFF825AFD09E00880FD0 /* CVHeaderViewModel.swift in Sources */,
@@ -1213,7 +1214,6 @@
 				D44CDF4C25AFB4F300880FD0 /* CLSubTitle.swift in Sources */,
 				D4BAB80A25B0895B00D21593 /* ViewShowcasePresenterProtocol.swift in Sources */,
 				D4BAB7B625B0592500D21593 /* Candidate.swift in Sources */,
-				D4BAB81325B0913700D21593 /* UIApplicationHelperService.swift in Sources */,
 				D44CDF5625AFB51400880FD0 /* CLSubHeader.swift in Sources */,
 				D4BAB80525B0895200D21593 /* ViewShowcasePresenter.swift in Sources */,
 				D4BAB81E25B0BCD700D21593 /* GalleryCollectionViewDataSource-ContextMenu.swift in Sources */,
@@ -1233,7 +1233,6 @@
 				D44CDF9D25AFB9AA00880FD0 /* GiphyAPICoordinator.swift in Sources */,
 				D44CDF2E25AFB39000880FD0 /* UIViewController-DismissKeyboardOnTap.swift in Sources */,
 				D4BAB80025B0893A00D21593 /* ViewShowcaseViewController.swift in Sources */,
-				D4BAB81825B0915400D21593 /* UIApplicationHelperServiceProtocol.swift in Sources */,
 				D44CDF1F25AFB2B400880FD0 /* Storyboarded.swift in Sources */,
 				D4BAB83E25B0C74B00D21593 /* GifSupportModels.swift in Sources */,
 				D44CDFA225AFB9B600880FD0 /* GiphyAPIPresenter.swift in Sources */,
@@ -1243,6 +1242,7 @@
 				D44CDF4425AFB4D200880FD0 /* CLTitle.swift in Sources */,
 				D4BAB84D25B0DB3500D21593 /* GifSearchModel.swift in Sources */,
 				D44CDF6625AFB5A100880FD0 /* CLPrimaryButton.swift in Sources */,
+				D438A84525B7307E001483F6 /* UIApplicationHelperService.swift in Sources */,
 				D4BAB7D825B05E3E00D21593 /* UIView-FadeTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
